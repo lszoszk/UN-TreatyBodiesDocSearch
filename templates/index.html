@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UN General Comments/Recommendations Browser</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <i id="toggle-icon" class="fas fa-moon"></i>
+    </div>
+    <div class="container">
+        <h1>UN General Comments/Recommendations Browser</h1>
+        <form action="/search" method="post">
+            <input type="text" name="search_query" class="form-control" placeholder="Insert your keyword(s) here">
+            <br>
+            <div class="row">
+                <!-- Concerned Persons/Groups -->
+                <div class="col-md-8">
+                    <label for="labels"><strong>Concerned persons/groups:</strong> <small>(hold down Ctrl or Shift to select more than one option)</small></label>
+                    <br>
+                    <select multiple name="labels[]" id="labels" class="form-control">
+                        <option value="Adolescents">Adolescents</option>
+                        <option value="Children">Children</option>
+                        <option value="Children in alternative care">Children in alternative care</option>
+                        <option value="Indigenous peoples">Indigenous peoples</option>
+                        <option value="Internally displaced persons">Internally displaced persons</option>
+                        <option value="LGBT+">LGBT+ persons</option>
+                        <option value="Migrants">Migrants</option>
+                        <option value="Non-citizens & stateless">Non-citizens & stateless</option>
+                        <option value="Persons affected by armed conflict" >Persons affected by armed conflict</option>
+                        <option value="Persons affected by natural disasters">Persons affected by natural disasters</option>
+                        <option value="Persons deprived of their liberty">Persons deprived of their liberty</option>
+                        <option value="Persons in street situations">Persons in street situations</option>
+                        <option value="Persons living in poverty">Persons living in poverty</option>
+                        <option value="Persons living in rural/remote areas">Persons living in rural/remote areas</option>
+                        <option value="Persons living with HIV/AIDS">Persons living with HIV/AIDS</option>
+                        <option value="Persons with disabilities">Persons with disabilities</option>
+                        <option value="Roma, Gypsies, Sinti & Travellers">Roma, Gypsies, Sinti & Travellers</option>
+                        <option value="Refugees & asylum-seekers">Refugees & asylum-seekers</option>
+                        <option value="Women/girls">Women/girls</option>
+                        <!-- Add more options here -->
+                    </select>
+                </div>
+            <br>
+            <!-- Treaty Bodies -->
+            <div class="col-md-4">
+                <label for="labels"><strong>Limit to the selected Treaty Bodies:</strong></label>
+                <br>
+                <div class ="treaty-body-container">
+                <input type="checkbox" id="CRC" name="treatyBodies[]" value="CRC">
+                <label for="CRC">CRC</label><br>
+                <input type="checkbox" id="ESCR" name="treatyBodies[]" value="ESCR">
+                <label for="ESCR">ESCR</label><br>
+                </select>
+                </div>
+            </div>
+        </div>
+            <br>
+            <button type="submit">Search</button>
+            <br>
+            <br>
+            <i>Only General Comments adopted by the Committee on the Rights of the Child and the Committee on Economic, Social and Cultural Rights are included in the database. More Treaty Bodies to be added soon.
+            <br>
+            <br>
+            For multi-word phrases, use quotation marks, e.g. "human rights".</i>
+        </form>
+        <br>
+        <small><em>Developed by <a href="https://prawo.amu.edu.pl/en/c/title/doctors/p/dr-lukasz-szoszkiewicz-2/">Łukasz Szoszkiewicz</a>. Version 2.0 (2 January 2024)</em></small>
+    </div>
+<script src="{{ url_for('static', filename='js/script-index.js') }}"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('form[action="/search"]').addEventListener('submit', function(e) {
+            var searchQuery = document.querySelector('input[name="search_query"]').value;
+            var selectedFilters = document.querySelectorAll('select[name="labels[]"] option:checked, input[name="treatyBodies[]"]:checked').length;
+
+            if (!searchQuery.trim() && selectedFilters === 0) {
+                e.preventDefault(); // Prevent form submission
+                alert("Please insert a keyword and/or select filters to perform a search.");
+                return;
+            }
+        });
+    });
+</script>
+</body>
+</html>

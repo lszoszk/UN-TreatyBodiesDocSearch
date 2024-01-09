@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-results.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="dark-mode-toggle">
+        <i id="toggle-icon" class="fas fa-moon"></i> <!-- Default icon for light mode -->
+    </div>
+    <div class="my-custom-container">
+        <h1>Search results</h1>
+        <div>
+        <a class="export-btn" href="/">Main Site</a>
+        <button class="export-btn" id="exportToExcelBtn">Export</button>
+        <button class="export-btn" id="toggle-all">Expand All</button>
+        <button class="analytics-toggle-button">Analytics</button>
+        </div>
+        <br>
+        <p><strong>Searched query:</strong> {{ query }}
+            {% if selected_labels %}
+                <span>(Concerned groups: {{ selected_labels | join(', ') }})</span>
+            {% endif %}</p>
+        <p><strong>Total hits:</strong> {{ total_hits }} paragraphs (in {{ total_docs }} documents)</p>
+    <!-- Analytics Container -->
+        <div class="analytics-container">
+            <div class="analytics-row">
+                <!-- First Column: Summary -->
+                <div class="analytics-column">
+                    <h2 class="analytics-header">Summary</h2>
+                    <p><strong>Most active Treaty Bodies <small>(hits)</small>:</strong>
+                        {% for committee, count in committees_with_hits %}
+                            {{ committee }} ({{ count }}){% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </p>
+                    <p id="concerned-groups-summary"><strong>Most concerned groups/persons <small>(hits)</small>:</strong>
+                        {% for label, count in most_concerned_groups %}
+                            {{ label }} ({{ count }}){% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </p>
+                    <h2 class="analytics-header">Narrow your search</h2>
+                    <p>Refine your search by finding specific keyword within your current results.</p>
+                    <div class="search-container">
+                        <input type="text" id="paragraphSearch" placeholder="Insert your keyword">
+                        <p id="hits-count"><small>Hits: 0 paragraphs, 0% of initial results</small></p>
+                    </div>
+                </div>
+
+                <!-- Second Column: Language -->
+                <div class="analytics-column">
+                    <h2 class="analytics-header">Language</h2>
+                        <p id="common-words-summary"><strong>Most common words <small>(hits)</small>:</strong>
+                            {% for word, count in most_common_words %}
+                                {{ word }} ({{ count }}){% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        </p>
+                        <p id="common-bigrams-summary"><strong>Most common collocations <small>(hits)</small>:</strong>
+                            {% for bigram, count in most_common_bigrams %}
+                                {{ bigram }} {{ count }}{% if not loop.last %}; {% endif %}
+                            {% endfor %}
+                        </p>
+                </div>
+            </div>
+        </div>
+        <div id="accordion">
+            {% for doc_name, doc_info in results %}
+                <div class="card">
+                    <div class="card-header">
+                        <span class="doc-number">{{ loop.index }}.</span>
+                        <a class="card-link" data-toggle="collapse" href="#collapse{{ loop.index }}">
+                            [{{ doc_info.committee }}] {{ doc_name }} ({{ doc_info.total_count }} hits)
+                        </a>
+                        <a href="{{ doc_info.link }}" target="_blank" class="link-icon">
+                            <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                    <div id="collapse{{ loop.index }}" class="collapse" data-parent="#accordion">
+                        {% for paragraph_id, paragraph, count in doc_info.paragraphs %}
+                            <div class="result-item {% if loop.index is odd %}bg-light{% endif %}">
+                                <div class="result-subitem">
+                                    <strong>Paragraph {{ paragraph_id | safe }}:</strong>
+                                    <span class="paragraph-text">{{ paragraph['Text'] | safe }}</span>
+                                </div>
+                                {% if paragraph['Labels'] %}
+                                    <div class="result-subitem">
+                                        <strong>Concerned Groups:</strong>
+                                        {{ paragraph['Labels'] | join(', ') | safe }}
+                                    </div>
+                                {% endif %}
+                                <button class="copy-btn" data-copy-content="{{ paragraph['Text'] }} - {{ doc_info['committee'] }}, {{ doc_name }}, {{ doc_info['adoption_date'] }}, {{ doc_info['signature'] }}, para. {{ paragraph_id }}" title="Copy to clipboard">
+                                    <i class="fas fa-copy"></i>
+                                    <span class="copy-tooltip">Copied!</span>
+                                </button>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+        // Store the original hits count for each document
+    document.querySelectorAll('.card').forEach(card => {
+        const cardHeader = card.querySelector('.card-header');
+        const docNameElement = cardHeader.querySelector('.card-link'); // Adjust selector as needed
+        if (docNameElement) {
+            const match = docNameElement.innerHTML.match(/(\d+) hits/);
+            if (match && match[1]) {
+                card.setAttribute('data-original-hits', match[1]);
+            }
+        }
+    });
+
+    // Cache DOM elements for efficiency
+    const darkModeToggle = document.getElementById("toggle-icon");
+    const body = document.body;
+    const toggleAllButton = document.getElementById('toggle-all');
+    const toggleButton = document.querySelector('.analytics-toggle-button');
+    const analyticsContainer = document.querySelector('.analytics-container');
+    const searchInput = document.getElementById('paragraphSearch');
+
+    // Initialize the initial total hits with the server-side provided value
+    const initialTotalHits = {{ total_hits }};
+
+    // Toggle dark mode functionality
+    function toggleDarkMode() {
+        body.classList.toggle("dark-mode");
+        darkModeToggle.classList.toggle("fa-sun");
+        darkModeToggle.classList.toggle("fa-moon");
+        localStorage.setItem("darkMode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+    }
+
+    // Check and set dark mode on load
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        darkModeToggle.classList.replace("fa-moon", "fa-sun");
+    }
+
+    darkModeToggle.addEventListener("click", toggleDarkMode);
+
+    // Toggle all functionality for accordion
+    let isExpanded = false;
+    toggleAllButton.addEventListener('click', function() {
+        document.querySelectorAll('#accordion .collapse').forEach(element => {
+            let currentState = element.classList.contains('show');
+            if (isExpanded && currentState || !isExpanded && !currentState) {
+                new bootstrap.Collapse(element, { toggle: true });
+            }
+        });
+        isExpanded = !isExpanded;
+        toggleAllButton.textContent = isExpanded ? 'Collapse All' : 'Expand All';
+    });
+
+    // Toggle analytics container with smooth effect
+    toggleButton.addEventListener('click', function() {
+        analyticsContainer.classList.toggle('visible');
+        if (analyticsContainer.classList.contains('visible')) {
+            let scrollHeight = analyticsContainer.scrollHeight;
+            analyticsContainer.style.height = scrollHeight + "px";
+        } else {
+            analyticsContainer.style.height = 0;
+        }
+        toggleButton.classList.toggle('active');
+    });
+
+    // Copy to clipboard functionality
+    function copyToClipboard(text, button) {
+        navigator.clipboard.writeText(text).then(() => {
+            const tooltip = button.querySelector('.copy-tooltip');
+            tooltip.style.display = 'inline-block';
+            setTimeout(() => {
+                tooltip.style.display = 'none';
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+
+    // Attach event listeners to copy buttons
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const content = this.getAttribute('data-copy-content');
+            copyToClipboard(content, this);
+        });
+    });
+
+    // Export to Excel button functionality
+    document.getElementById('exportToExcelBtn').addEventListener('click', function() {
+        var searchKey = "{{ search_key }}";
+        var form = document.createElement('form');
+        form.method = 'POST';
+        form.action = '/export_to_excel';
+        form.style.display = 'none';
+
+        var input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = 'search_key';
+        input.value = searchKey;
+        form.appendChild(input);
+
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
+    });
+
+    // Function to highlight dynamic search terms
+    function highlightDynamicText(element, query) {
+        if (!query) return; // Don't proceed if query is empty
+
+        const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const regex = new RegExp(escapedQuery, 'gi');
+
+        let innerHTML = element.innerHTML;
+        innerHTML = innerHTML.replace(/<\/?span[^>]*>/g, ""); // Remove existing dynamic highlight spans
+        innerHTML = innerHTML.replace(regex, match => `<span class="highlight-dynamic">${match}</span>`);
+        element.innerHTML = innerHTML;
+    }
+
+    // Function to clear only dynamic highlights
+    function clearDynamicHighlights() {
+        document.querySelectorAll('.highlight-dynamic').forEach(span => {
+            span.outerHTML = span.textContent; // Replace span with just its text
+        });
+    }
+
+// Event listener for the search input
+searchInput.addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    let overallMatchingHits = 0; // To keep track of matching hits across all documents
+
+    if (query.length >= 4) {
+        document.querySelectorAll('.card').forEach(card => {
+            let matchingHitsInDoc = 0; // To track hits in each individual document
+
+            card.querySelectorAll(".result-item").forEach(paragraph => {
+                const textElement = paragraph.querySelector(".paragraph-text");
+                const text = textElement.textContent.toLowerCase();
+
+                if (text.includes(query)) {
+                    matchingHitsInDoc++;
+                    highlightDynamicText(textElement, query);
+                    paragraph.style.display = "block";
+                } else {
+                    paragraph.style.display = "none";
+                }
+            });
+
+            // Update the overall matching hits count
+            overallMatchingHits += matchingHitsInDoc;
+
+            // Update hits count for each document
+            const cardHeader = card.querySelector('.card-header');
+            const docNameElement = cardHeader.querySelector('.card-link');
+            if (docNameElement) {
+                const docNameContent = docNameElement.innerHTML;
+                const updatedContent = docNameContent.replace(/(\(.*? hits\))/, `(${matchingHitsInDoc} hits)`);
+                docNameElement.innerHTML = updatedContent;
+            }
+        });
+
+        // Calculate and update the overall hits count and percentage
+        let hitsPercentage = (overallMatchingHits / initialTotalHits * 100).toFixed(2) + '%';
+        const totalHitsElement = document.getElementById("hits-count");
+        totalHitsElement.innerHTML = `<small>Hits: ${overallMatchingHits} paragraphs, ${hitsPercentage} of initial results</small>`;
+
+    } else {
+        // Reset view if query is cleared or too short
+        if (query.length < 4) {
+            clearDynamicHighlights();
+            document.querySelectorAll('.card').forEach(card => {
+                card.querySelectorAll(".result-item").forEach(paragraph => {
+                    paragraph.style.display = "block"; // Show all paragraphs
+                });
+
+                // Use the stored original hits count for each document
+                const cardHeader = card.querySelector('.card-header');
+                const docNameElement = cardHeader.querySelector('.card-link');
+                if (docNameElement) {
+                    const originalHits = card.getAttribute('data-original-hits');
+                    const updatedContent = docNameElement.innerHTML.replace(/(\(.*? hits\))/, `(${originalHits} hits)`);
+                    docNameElement.innerHTML = updatedContent;
+                }
+            });
+
+            // Reset overall hits count and percentage to initial state
+            const totalHitsElement = document.getElementById("hits-count");
+            totalHitsElement.innerHTML = `<small>Hits: ${initialTotalHits} paragraphs, 100% of initial results</small>`;
+        }
+    }
+
+        // Function to clear highlights from paragraphs
+        function clearHighlights() {
+            document.querySelectorAll('.highlight-dynamic').forEach(span => {
+                span.outerHTML = span.textContent; // Replace span with just its text
+            });
+        }
+
+        // Function to expand or collapse all paragraphs
+        function expandAllParagraphs(expand) {
+            const paragraphs = document.querySelectorAll(".result-item");
+
+            paragraphs.forEach((paragraph) => {
+                if (expand) {
+                    paragraph.style.display = "block"; // Show all paragraphs
+                } else {
+                    paragraph.style.display = "none"; // Hide all paragraphs
+                }
+            });
+        }
+
+        // Function to expand or collapse all paragraphs
+        function expandAllParagraphs(expand) {
+            const paragraphs = document.querySelectorAll(".result-item");
+
+            paragraphs.forEach((paragraph) => {
+                if (expand) {
+                    paragraph.style.display = "block"; // Show all paragraphs
+                } else {
+                    paragraph.style.display = "none"; // Hide all paragraphs
+                }
+            });
+        }
+    });
+
+    // Get the button
+    var mybutton = document.getElementById("scrollToTopBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {
+        scrollFunction();
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document smoothly
+    mybutton.addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+});
+
+</script>
+<button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+</body>
+</html>

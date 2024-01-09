@@ -1,0 +1,337 @@
+/* UN color scheme */
+body {
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+}
+
+h1 {
+    color: #0073cf;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p, .result-subitem {
+    margin-bottom: 20px;
+}
+
+.card {
+    word-wrap: break-word;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.card-header {
+    position: relative;
+    background-color: #f4f5f7;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.result-item {
+    padding: 15px;
+    padding-right: 40px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: white;
+    position: relative;
+}
+
+.result-item:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.result-item:nth-child(even) {
+    background-color: #ffffff;
+}
+
+a, .card-link {
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.card-link {
+    color: #0073cf; /* Override for .card-link if different color is needed */
+}
+
+.card-link:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.export-btn, .analytics-toggle-button {
+    border: 1px solid #0d0d0d;
+    background-color: #e9e9ed;
+    color: #0d0d0d;
+    font-size: 75%;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+    margin: 0 5px;
+}
+
+.export-btn:hover {
+    background-color: #c7c9ce;
+    color: #cc0099;
+    border-color: #0d0d0d;
+    text-decoration: none;
+}
+
+.copy-btn, .link-icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+    color: #0073cf;
+    transition: color 0.2s;
+}
+
+.copy-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.copy-btn:hover, .link-icon:hover {
+    color: #0055a3;
+}
+
+.copy-tooltip {
+    display: none;
+    position: absolute;
+    top: -30px;
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.highlight {
+    background-color: lightskyblue;
+}
+
+.paragraph-text {
+    white-space: pre-wrap; /* This will allow the <br> tags to create line breaks */
+}
+
+/* Dark mode toggle style */
+.dark-mode-toggle {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Dark mode specific styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body.dark-mode .result-item,
+body.dark-mode .result-item.bg-light,
+body.dark-mode h1,
+body.dark-mode a,
+body.dark-mode .card,
+body.dark-mode .card-header,
+body.dark-mode .export-btn,
+body.dark-mode .result-item,
+body.dark-mode .copy-btn {
+    background-color: #424242;
+    color: #f9f9f9;
+    border-color: #616161;
+}
+
+body.dark-mode .link-icon,
+body.dark-mode .dark-mode-toggle .fas {
+    color: #f9f9f9;
+}
+
+body.dark-mode .result-item,
+body.dark-mode .result-item.bg-light {
+    background-color: #424242 !important; /* Set the background color for all items in dark mode and elements with .bg-light */
+    color: #f9f9f9;
+    border-color: #616161;
+}
+
+body.dark-mode button:hover,
+body.dark-mode .export-btn:hover,
+body.dark-mode .analytics-toggle-button:hover {
+    color: #cc0099; /* Set the text color to pink when hovering over buttons in dark mode */
+}
+
+/* Custom container styles */
+.my-custom-container {
+    position: relative;
+    max-width: none !important;
+    width: 90%;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 576px) {
+    .export-btn, .analytics-toggle-button {
+        font-size: 0.65rem; /* Smaller font size */
+        padding: 0.4rem 1rem; /* Smaller padding */
+        margin: 0 3px; /* Adjust margin as needed */
+    }
+
+    .my-custom-container {
+            width: 95% !important; /* Adjust the width to 98% */
+            padding-right: 2px;
+            padding-left: 2px;
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+        }
+    }
+
+    .export-btn:hover, .analytics-toggle-button:hover {
+        background-color: #c7c9ce;
+        color: #cc0099;
+        border-color: #0d0d0d;
+        text-decoration: none;
+    }
+
+    .analytics-toggle-button.active {
+        background-color: #0d0d0d; /* Change color when active */
+        color: #fff;
+    }
+
+    /* CSS for the analytics container */
+    .analytics-container {
+        overflow: hidden;
+        transition: all 0.5s ease-out;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: 2px;
+    }
+
+    /* Style when the analytics container is visible */
+    .analytics-container.visible {
+        height: auto; /* Adjust to the natural height of the content */
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Analytics two-column layout */
+    .analytics-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+.analytics-column {
+    flex: 1; /* Each column takes equal width */
+    padding: 10px; /* Padding for spacing */
+    background-color: #e9e9ed;
+    }
+
+    /* Adjustments for smaller screens */
+    @media (max-width: 768px) {
+        .analytics-column {
+            flex-basis: 100%; /* Full width on smaller screens */
+        }
+    }
+
+/* Headers for analytics columns */
+.analytics-header {
+    font-size: 20px;
+    color: #0073cf;
+    margin-bottom: 10px;
+}
+
+    .highlight-dynamic {
+        background-color: #cc0099;
+        color: white;
+    }
+
+/* Dark mode specific styles */
+body.dark-mode .analytics-header {
+    color: #cc0099; /* Apply pink color to analytics headers in dark mode */
+}
+
+body.dark-mode .analytics-toggle-button {
+    background-color: #424242; /* Existing style */
+    color: #f9f9f9; /* Existing style */
+}
+
+body.dark-mode .analytics-column {
+    flex: 1; /* Each column takes equal width */
+    padding: 10px; /* Padding for spacing */
+    background-color: #424242;
+}
+
+body.dark-mode .card-header,
+body.dark-mode .analytics-toggle-button.active {
+    background-color: #424242; /* Existing style */
+    color: #fff; /* Existing style */
+}
+
+body.dark-mode .card-link {
+    background-color: #424242; /* Existing style */
+}
+
+body.dark-mode h1 {
+    background-color: #333 !important; /* Existing style */
+}
+
+body.dark-mode .analytics-toggle-button.active {
+    background-color: #cc0099; /* Existing style */
+    color: #fff; /* Existing style */
+}
+
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #555; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 10px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 15px; /* Increase font size */
+}
+
+#scrollToTopBtn:hover {
+    background-color: #333; /* Add a dark-grey background on hover */
+}
+
+/* Dark mode specific styles */
+body.dark-mode #scrollToTopBtn {
+    background-color: #aaa; /* Lighter background for dark mode */
+    color: #333; /* Dark text for light background */
+}
+
+body.dark-mode #scrollToTopBtn:hover {
+    background-color: #888; /* Darker background for hover in dark mode */
+}

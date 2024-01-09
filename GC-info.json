@@ -1,0 +1,532 @@
+[
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC18-Harmful-REV.json",
+      "Name": "[REVISED] Joint General Recommendation No. 31 of the CEDAW / General Comment No. 18 of the CRC: Harmful practices",
+      "Simplified Name": "CRC GC18/CEDAW GR31: Harmful practices [Revised]",
+      "Signature": "CEDAW/C/GC/31/Rev.1–CRC/C/GC/18/Rev.1",
+      "Adoption Date": 43593,
+      "Adoption year": 2019,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F31%2FREV.1&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC19-Budget.json",
+      "Name": "General Comment No. 19: Public budgeting for the realization of children’s rights (art. 4)",
+      "Simplified Name": "GC19: Public budgeting for the realization of children’s rights",
+      "Signature": "CRC/C/GC/19",
+      "Adoption Date": 42572,
+      "Adoption year": 2016,
+      "Committee": "CRC",
+      "Link": "https://www.ohchr.org/en/documents/general-comments-and-recommendations/general-comment-no-19-2016-public-budgeting"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC20-Adolescence.json",
+      "Name": "General Comment No. 20: Implementation of the rights of the child during adolescence",
+      "Simplified Name": "GC20: Implementation of the rights of the child during adolescence",
+      "Signature": "CRC/C/GC/20",
+      "Adoption Date": 42710,
+      "Adoption year": 2016,
+      "Committee": "CRC",
+      "Link": "https://www.ohchr.org/en/documents/general-comments-and-recommendations/general-comment-no-20-2016-implementation-rights"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC21-Street.json",
+      "Name": "General Comment No. 21: Children in street situations",
+      "Simplified Name": "GC21: Children in street situations",
+      "Signature": "CRC/C/GC/21",
+      "Adoption Date": 42907,
+      "Adoption year": 2017,
+      "Committee": "CRC",
+      "Link": "https://www.ohchr.org/en/documents/general-comments-and-recommendations/general-comment-no-21-2017-children-street"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC24-Justice.json",
+      "Name": "General comment No. 24: Children’s rights in the child justice system",
+      "Simplified Name": "GC24: Children’s rights in the child justice system",
+      "Signature": "CRC/C/GC/24",
+      "Adoption Date": 43726,
+      "Adoption year": 2019,
+      "Committee": "CRC",
+      "Link": "https://www.ohchr.org/en/documents/general-comments-and-recommendations/general-comment-no-24-2019-childrens-rights-child"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC25-Digital.json",
+      "Name": "General Comment No. 25: Children’s rights in relation to the digital environment",
+      "Simplified Name": "GC25: Children’s rights in relation to the digital environment",
+      "Signature": "CRC/C/GC/25",
+      "Adoption Date": 44257,
+      "Adoption year": 2021,
+      "Committee": "CRC",
+      "Link": "https://www.ohchr.org/en/documents/general-comments-and-recommendations/general-comment-no-25-2021-childrens-rights-relation"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC26-Climate.json",
+      "Name": "General Comment No. 26 on children’s rights and the environment, with a special focus on climate change",
+      "Simplified Name": "GC26: Children’s rights and the environment, with a special focus on climate change",
+      "Signature": "\tCRC/C/GC/26",
+      "Adoption Date": 45166,
+      "Adoption year": 2023,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F26&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-CMW-GC22-MigPrinciples.json",
+      "Name": "Joint General Comment No. 3 of the CMW / No. 22 of the CRC: International migration - States parties’ obligations in particular with respect to countries of transit and destination",
+      "Simplified Name": "CRC GC22/CMW GC3: International migration - countries of transit and destination",
+      "Signature": "CRC/C/GC/22",
+      "Adoption Date": 43785,
+      "Adoption year": 2019,
+      "Committee": "CRC",
+      "Link": "https://www.ohchr.org/en/documents/general-comments-and-recommendations/joint-general-comment-no-3-cmw-and-no-22-crc-context"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-CMW-GC23-Migration.json",
+      "Name": "Joint General Comment No. 4 of the CMW / No. 23 of the CRC: International migration - general principles",
+      "Simplified Name": "CRC GC23/CMW GC4: International migration - general principles",
+      "Signature": "CRC/C/GC/23",
+      "Adoption Date": 43785,
+      "Adoption year": 2019,
+      "Committee": "CRC",
+      "Link": "https://www.ohchr.org/en/documents/general-comments-and-recommendations/joint-general-comment-no-4-cmw-and-no-23-crc-2017"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC1-AimsEd.json",
+      "Name": "General comment No. 1: The Aims of Education",
+      "Simplified Name": "GC1: The aims of education",
+      "Signature": "CRC/GC/2001/1",
+      "Adoption Date": 36998,
+      "Adoption year": 2001,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FGC%2F2001%2F1&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC2-NHRI.json",
+      "Name": "General Comment No. 2: The Role of Independent National Human Rights Institutions in the Protection and Promotion of the Rights of the Child",
+      "Simplified Name": "GC2: The role of independent NHRIs",
+      "Signature": "CRC/GC/2002/2",
+      "Adoption Date": 37575,
+      "Adoption year": 2002,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FGC%2F2002%2F2&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC3-HivAids.json",
+      "Name": "General Comment No. 3: HIV/AIDS and the rights of the children",
+      "Simplified Name": "GC3: HIV/AIDS and the rights of the children",
+      "Signature": "CRC/GC/2003/3",
+      "Adoption Date": 37697,
+      "Adoption year": 2003,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FGC%2F2003%2F3&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC4-AdolHealth.json",
+      "Name": "General Comment No. 4: Adolescent health and development in the context of the Convention on the Rights of the Child",
+      "Simplified Name": "GC4: Adolescent health and development",
+      "Signature": "CRC/GC/2003/4",
+      "Adoption Date": 37823,
+      "Adoption year": 2003,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FGC%2F2003%2F4&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC5-Implementation.json",
+      "Name": "General Comment No. 5: General Measures of Implementation of the Convention on the Rights of the Child",
+      "Simplified Name": "GC5: General measures of implementation of the CRC",
+      "Signature": "CRC/GC/2003/5",
+      "Adoption Date": 37897,
+      "Adoption year": 2003,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FGC%2F2003%2F5&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC6-UASC.json",
+      "Name": "General Comment No. 6: Treatment of Unaccompanied and Separated Children Outside Their Country of Origin",
+      "Simplified Name": "GC6: Treatment of unaccompanied and separated children outside their country of origin",
+      "Signature": "CRC/GC/2003/6",
+      "Adoption Date": 38596,
+      "Adoption year": 2005,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FGC%2F2005%2F6&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC7-Childhood.json",
+      "Name": "General Comment No. 7: Implementing child rights in early childhood",
+      "Simplified Name": "GC7: Implementing child rights in early childhood",
+      "Signature": "CRC/C/GC/7/Rev.1",
+      "Adoption Date": 38980,
+      "Adoption year": 2006,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F7%2FRev.1&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC8-Punishment.json",
+      "Name": "General Comment No. 8: The right of the child to protection from corporal punishment and other cruel or degrading forms of punishment (arts. 19; 28, para. 2; and 37, inter alia)",
+      "Simplified Name": "GC8: Protection from corporal punishment and other cruel or degrading forms of punishment ",
+      "Signature": "CRC/C/GC/8",
+      "Adoption Date": 38778,
+      "Adoption year": 2006,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F8&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC9-Disabilities.json",
+      "Name": "General Comment No. 9: The rights of children with disabilities",
+      "Simplified Name": "GC9: The rights of children with disabilities",
+      "Signature": "CRC/C/GC/9/Corr.1",
+      "Adoption Date": 39399,
+      "Adoption year": 2007,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F9%2FCorr.1&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC10-Justice.json",
+      "Name": "General Comment No. 10: Children’s rights in juvenile justice",
+      "Simplified Name": "GC10: Children’s rights in juvenile justice",
+      "Signature": "CRC/C/GC/10",
+      "Adoption Date": 39197,
+      "Adoption year": 2007,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F10&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC11-Indigenous.json",
+      "Name": "General Comment No. 11: Indigenous children and their rights under the Convention",
+      "Simplified Name": "GC11: Indigenous children",
+      "Signature": "CRC/C/GC/11",
+      "Adoption Date": 39856,
+      "Adoption year": 2009,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F11&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC12-Heard.json",
+      "Name": "General Comment No. 12: The right of the child to be heard ",
+      "Simplified Name": "GC12: The right of the child to be heard ",
+      "Signature": "CRC/C/GC/12",
+      "Adoption Date": 40014,
+      "Adoption year": 2009,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F12&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC13-Violence.json",
+      "Name": "General Comment No. 13: The right of the child to freedom from all forms of violence",
+      "Simplified Name": "GC13: The right of the child to freedom from all forms of violence",
+      "Signature": "CRC/C/GC/13",
+      "Adoption Date": 40651,
+      "Adoption year": 2011,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F13&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC14-BestInt.json",
+      "Name": "General Comment No. 14 on the right of the child to have his or her best interests taken as a primary consideration (art. 3, para. 1)",
+      "Simplified Name": "GC14: The right of the child to have his or her best interests taken as a primary consideration",
+      "Signature": "CRC/C/GC/14",
+      "Adoption Date": 41423,
+      "Adoption year": 2013,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F14&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC15-Health.json",
+      "Name": "General Comment No. 15 on the right of the child to the enjoyment of the highest attainable standard of health (art. 24)",
+      "Simplified Name": "GC15: The right of the child to the enjoyment of the highest attainable standard of health",
+      "Signature": "CRC/C/GC/15",
+      "Adoption Date": 41381,
+      "Adoption year": 2013,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F15&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC16-Business.json",
+      "Name": "General Comment No. 16 on State obligations regarding the impact of the business sector on children’s rights",
+      "Simplified Name": "GC16: Impact of the business sector on children’s rights",
+      "Signature": "CRC/C/GC/16",
+      "Adoption Date": 41381,
+      "Adoption year": 2013,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F16&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC17-Leisure.json",
+      "Name": "General Comment No. 17 on the right of the child to rest, leisure, play, recreational activities, cultural life and the arts (art. 31)",
+      "Simplified Name": "GC17: The right of the child to rest, leisure, play, recreational activities, cultural life and the arts",
+      "Signature": "CRC/C/GC/17",
+      "Adoption Date": 41381,
+      "Adoption year": 2013,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CRC%2FC%2FGC%2F17&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC18-Harmful.json",
+      "Name": "Joint General comment No. 18 of the CRC on harmful practices and General Recommendation No. 31 of the CEDAW",
+      "Simplified Name": "CRC GC18/CEDAW GR31: Harmful practices",
+      "Signature": "CEDAW/C/GC/31/CRC/C/GC/18",
+      "Adoption Date": 41957,
+      "Adoption year": 2014,
+      "Committee": "CRC",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F31%2FCRC%2FC%2FGC%2F18&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC26-Land.json",
+      "Name": "General Comment No. 26 on Land and economic, social and cultural rights",
+      "Simplified Name": "GC26: Land and economic, social and cultural rights",
+      "Signature": "E/C.12/GC/26",
+      "Adoption Date": 44917,
+      "Adoption year": 2022,
+      "Committee": "ESCR",
+      "Link": "https://undocs.org/Home/Mobile?FinalSymbol=E%2FC.12%2FGC%2F26&Language=E&DeviceType=Desktop&LangRequested=False"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC25-Science.json",
+      "Name": "General Comment No. 25 on article 15: science and economic, social and cultural rights",
+      "Simplified Name": "GC25: Science and economic, social and cultural rights",
+      "Signature": "E/C.12/GC/25",
+      "Adoption Date": 43951,
+      "Adoption year": 2020,
+      "Committee": "ESCR",
+      "Link": "https://undocs.org/Home/Mobile?FinalSymbol=E%2FC.12%2FGC%2F25&Language=E&DeviceType=Desktop&LangRequested=False"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC24-Business.json",
+      "Name": "General Comment No. 24 on State obligations under the International Covenant on Economic, Social and Cultural Rights in the context of business activities",
+      "Simplified Name": "GC25: State obligations under ICESCR in the context of business activities",
+      "Signature": "E/C.12/GC/24",
+      "Adoption Date": 42909,
+      "Adoption year": 2017,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2FGC%2F24&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC23-CondWork.json",
+      "Name": "General Comment No. 23 on the right to just and favourable conditions of work (article 7 of the International Covenant on Economic, Social and Cultural Rights)",
+      "Simplified Name": "GC23: Right to just and favourable conditions of work",
+      "Signature": "E/C.12/GC/23",
+      "Adoption Date": 42433,
+      "Adoption year": 2016,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2FGC%2F23&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC22-SexHealth.json",
+      "Name": "General Comment No. 22 on the right to sexual and reproductive health (article 12 of the International Covenant on Economic, Social and Cultural Rights)",
+      "Simplified Name": "GC22: Right to sexual and reproductive health",
+      "Signature": "E/C.12/GC/22",
+      "Adoption Date": 42433,
+      "Adoption year": 2017,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2FGC%2F22&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC21-Culture.json",
+      "Name": "General comment No. 21: Right of everyone to take part in cultural life",
+      "Simplified Name": "GC21: Right of everyone to take part in cultural life",
+      "Signature": "E/C.12/GC/21",
+      "Adoption Date": 40168,
+      "Adoption year": 2009,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2FGC%2F21&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC20-NonDiscESC.json",
+      "Name": "General Comment No. 20: Non-discrimination in economic, social and cultural rights",
+      "Simplified Name": "GC20: Non-discrimination in economic, social and cultural rights",
+      "Signature": "E/C.12/GC/20",
+      "Adoption Date": 39996,
+      "Adoption year": 2009,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2FGC%2F20&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC19-SocSecurity.json",
+      "Name": "General Comment No. 19: The right to social security (art. 9)",
+      "Simplified Name": "GC19: Right to social security",
+      "Signature": "E/C.12/GC/19",
+      "Adoption Date": 39482,
+      "Adoption year": 2008,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2FGC%2F19&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC18-Work.json",
+      "Name": "General Comment No. 18: Article 6 of the International Covenant on Economic, Social and Cultural Rights",
+      "Simplified Name": "GC18: Article 6 of the ICESCR",
+      "Signature": "E/C.12/GC/18",
+      "Adoption Date": 38754,
+      "Adoption year": 2006,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2FGC%2F18&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC17-Author.json",
+      "Name": "General Comment No. 17: The right of everyone to benefit from the protection of the moral and material interests resulting from any scientific, literary or artistic production of which he or she is the author",
+      "Simplified Name": "GC17: The right of everyone to benefit from the protection of the interests resulting from any production of which he or she is the author",
+      "Signature": "E/C.12/GC/17",
+      "Adoption Date": 38729,
+      "Adoption year": 2006,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2FGC%2F17&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC16-Equality.json",
+      "Name": "General comment No. 16: The equal right of men and women to the enjoyment of all economic, social and cultural rights (art. 3 of the International Covenant on Economic, Social and Cultural Rights)",
+      "Simplified Name": "GC16: Equal right of men and women to the enjoyment of all economic, social and cultural rights",
+      "Signature": "E/C.12/2005/4",
+      "Adoption Date": 38575,
+      "Adoption year": 2005,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F2005%2F4&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC15-Water.json",
+      "Name": "General Comment No. 15: The right to water",
+      "Simplified Name": "GC15: The Right to water",
+      "Signature": "E/C.12/2002/11",
+      "Adoption Date": 37641,
+      "Adoption year": 2003,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F2002%2F11&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC14-Health.json",
+      "Name": "General Comment No. 14: The right to the highest attainable standard of health",
+      "Simplified Name": "GC14: Right to the highest attainable standard of health",
+      "Signature": "E/C.12/2000/4",
+      "Adoption Date": 36749,
+      "Adoption year": 2000,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F2000%2F4&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC13-Education.json",
+      "Name": "General Comment No. 13 (Twenty-first session, 1999), The right to education (article 13 of the Covenant)",
+      "Simplified Name": "GC13: Right to education",
+      "Signature": "E/C.12/1999/10",
+      "Adoption Date": 36502,
+      "Adoption year": 1999,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F1999%2F10&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC12-Food.json",
+      "Name": "General Comment No. 12: The right to adequate food (Art.11)",
+      "Simplified Name": "GC12: Right to adequate food ",
+      "Signature": "E/C.12/1999/5",
+      "Adoption Date": 36292,
+      "Adoption year": 1999,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F1999%2F5&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC11-PrimEducation.json",
+      "Name": "General Comment No. 11: Plans of action for primary education (art.14)",
+      "Simplified Name": "GC11: Plans of action for primary education",
+      "Signature": "E/C.12/1999/4",
+      "Adoption Date": 36291,
+      "Adoption year": 1999,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F1999%2F4&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC10-NHRI.json",
+      "Name": "General Comment No. 10: The role of national human rights institutions in the protection of economic, social and cultural rights",
+      "Simplified Name": "GC10: The role of NHRIs in the protection of economic, social and cultural rights",
+      "Signature": "E/C.12/1998/25",
+      "Adoption Date": 36143,
+      "Adoption year": 1998,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F1998%2F25&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC9-DomesticApp.json",
+      "Name": "General Comment No. 9: The domestic application of the Covenant",
+      "Simplified Name": "GC9: The domestic application of the Covenant",
+      "Signature": "E/C.12/1998/24",
+      "Adoption Date": 36132,
+      "Adoption year": 1998,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F1998%2F24&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC8-Sanctions.json",
+      "Name": "General comment No. 8: The relationship between economic sanctions and respect for economic, social and cultural rights",
+      "Simplified Name": "GC8: The relationship between economic sanctions and respect for economic, social and cultural rights",
+      "Signature": "E/C.12/1997/8",
+      "Adoption Date": 35776,
+      "Adoption year": 1997,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=E%2FC.12%2F1997%2F8&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC7-Evictions.json",
+      "Name": "General Comment No. 7:  The right to adequate housing  (art. 11 (1) of the Covenant):  Forced evictions",
+      "Simplified Name": "GC7: Right to adequate housing  - Forced evictions",
+      "Signature": "E/1998/22",
+      "Adoption Date": 35570,
+      "Adoption year": 1997,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCESCR%2FGEC%2F6430&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC6-Older.json",
+      "Name": "General Comment No. 6: The economic, social and cultural rights of older persons",
+      "Simplified Name": "GC6: The economic, social and cultural rights of older persons",
+      "Signature": "E/1996/22",
+      "Adoption Date": 35041,
+      "Adoption year": 1995,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCESCR%2FGEC%2F6429&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC5-NonDisc.json",
+      "Name": "General Comment No. 5: Persons with disabilities",
+      "Simplified Name": "GC5: Persons with disabilities",
+      "Signature": "E/1995/22",
+      "Adoption Date": 34677,
+      "Adoption year": 1994,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCESCR%2FGEC%2F4760&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC4-Housing.json",
+      "Name": "General Comment No. 4:  The right to adequate housing (art. 11 (1) of the Covenant)",
+      "Simplified Name": "GC4: right to adequate housing",
+      "Signature": "E/1992/23",
+      "Adoption Date": 33585,
+      "Adoption year": 1991,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCESCR%2FGEC%2F4759&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC3-Obligations.json",
+      "Name": "General Comment No. 3: The nature of States parties obligations (Art. 2, par. 1) ",
+      "Simplified Name": "GC3: The nature of States parties obligations",
+      "Signature": "E/1991/23",
+      "Adoption Date": 33221,
+      "Adoption year": 1990,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCESCR%2FGEC%2F4758&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC2-IntAssistance.json",
+      "Name": "General Comment No. 2: International technical assistance measures (Art. 22)",
+      "Simplified Name": "GC2: International technical assistance measures ",
+      "Signature": "E/1990/23",
+      "Adoption Date": 32906,
+      "Adoption year": 1990,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCESCR%2FGEC%2F4757&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC1-GenCom.json",
+      "Name": "General Comment No. 1: Reporting by States parties ",
+      "Simplified Name": "GC1: Reporting by States parties ",
+      "Signature": "E/1989/22",
+      "Adoption Date": 29794,
+      "Adoption year": 1981,
+      "Committee": "ESCR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCESCR%2FGEC%2F4756&Lang=en"
+    }
+  ]

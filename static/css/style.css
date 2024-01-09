@@ -1,0 +1,142 @@
+/* UN color scheme */
+body {
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container, .card-header, button, a {
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+h1 {
+    font-size: 28px;
+    color: #0073cf;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.container {
+    padding: 20px;
+    margin: 15px;
+    border-radius: 5px;
+    background-color: white; /* Default white background for containers */
+    border: 0px solid #e0e0e0; /* Border for containers */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow for containers */
+}
+
+button {
+    background-color: #e9e9ed;
+    color: black;
+    border: 1px solid #0d0d0d;
+    padding: 10px 20px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    font-size: 75%;
+}
+
+button:hover {
+    background-color: #c7c9ce;
+    color: #cc0099;
+    border-color: #0d0d0d;
+    text-decoration: none;
+}
+
+.treaty-body-container {
+    height: 120px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    padding: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #0073cf;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    right: 10px;
+    top: 5px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 24px; /* Icon size */
+    color: #333; /* Default icon color */
+}
+
+/* Dark mode specific styles */
+body.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+body.dark-mode h1,
+body.dark-mode a,
+body.dark-mode button,
+body.dark-mode .dark-mode-toggle {
+    color: #f9f9f9; /* Light color for contrast in dark mode */
+}
+
+body.dark-mode .container {
+    background-color: #424242; /* Dark background for containers in dark mode */
+    border-color: #616161; /* Dark border for containers in dark mode */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Lighter box-shadow for containers in dark mode */
+}
+
+body.dark-mode .treaty-body-container {
+    background-color: #555555; /* Dark border for containers in dark mode */
+}
+
+body.dark-mode button {
+    color: #cc0099;
+    font-weight: bold; /* Making the text bold in dark mode */
+}
+
+/* Style for the select box when it is in focus in dark mode */
+body.dark-mode select:focus {
+    background-color: #555; /* Keep the darker background */
+    color: #f9f9f9; /* Light text */
+    outline: none; /* Optional: remove the default focus outline */
+}
+
+/* Style for the select box generally in dark mode */
+body.dark-mode select {
+    background-color: #555; /* Dark background */
+    color: #f9f9f9; /* Light text */
+}
+
+/* Style for the selected option in dark mode */
+body.dark-mode select option.selected {
+    color: #f9f9f9; /* Light text for better contrast */
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        padding: 20px;
+        margin: 0px;
+    }
+
+    button, select, input[type="text"] {
+        font-size: 14px;
+    }
+}
