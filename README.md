@@ -1,5 +1,7 @@
 # UN Treaty Bodies Search and Analysis App
 
+<a href="https://zenodo.org/doi/10.5281/zenodo.10495719"><img src="https://zenodo.org/badge/741047917.svg" alt="DOI"></a>
+
 This Flask application, also available at <a href="https://lszoszk.pythonanywhere.com/">lszoszk.pythonanywhere.com</a>, is designed to perform in-depth analysis and search through a collection of the General Comments/Recommendations adopted by the UN Treaty Bodies. It offers functionalities such as keyword searching, concerned groups filtering, analysis of collocations and export search results to Excel.  🇺🇳 🔍📊📄
 
 ## Description
