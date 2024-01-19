@@ -22,12 +22,8 @@ h1 {
 }
 
 .container {
-    padding: 20px;
-    margin: 15px;
-    border-radius: 5px;
-    background-color: white; /* Default white background for containers */
-    border: 0px solid #e0e0e0; /* Border for containers */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Shadow for containers */
+    padding-top: 10px;
+    max-width: max-content-width;
 }
 
 button {
@@ -48,6 +44,7 @@ button:hover {
 }
 
 .treaty-body-container {
+    background-color: #fff;
     height: 120px;
     overflow-y: scroll;
     border: 1px solid #ccc;
@@ -71,8 +68,8 @@ a:hover {
 }
 
 .dark-mode-toggle {
-    position: fixed;
-    right: 10px;
+    position: initial;
+    margin: 5px;
     top: 5px;
     z-index: 1000;
     cursor: pointer;
@@ -80,9 +77,25 @@ a:hover {
     color: #333; /* Default icon color */
 }
 
+/* Dark mode toggle icon styles */
+#dark-mode-toggle i {
+    position: initial;
+    margin: 5px;
+    top: 5px;
+    z-index: 1000;
+    cursor: pointer;
+    font-size: 24px; /* Icon size */
+    color: #333; /* Default icon color */
+}
+
+/* Change icon color to white when dark mode is active */
+body.dark-mode #dark-mode-toggle i.dark-mode-active {
+    color: #cc0099; /* Secondary color */
+}
+
 /* Dark mode specific styles */
 body.dark-mode {
-    background-color: #333;
+    background-color: #424242;
     color: #f9f9f9;
 }
 
@@ -95,8 +108,7 @@ body.dark-mode .dark-mode-toggle {
 
 body.dark-mode .container {
     background-color: #424242; /* Dark background for containers in dark mode */
-    border-color: #616161; /* Dark border for containers in dark mode */
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1); /* Lighter box-shadow for containers in dark mode */
+    border-color: #424242;
 }
 
 body.dark-mode .treaty-body-container {
@@ -106,6 +118,11 @@ body.dark-mode .treaty-body-container {
 body.dark-mode button {
     color: #cc0099;
     font-weight: bold; /* Making the text bold in dark mode */
+}
+
+/* Style for the hamburger icon in dark mode */
+body.dark-mode .navbar-toggler-icon {
+    color: #f9f9f9; /* Light color for contrast in dark mode */
 }
 
 /* Style for the select box when it is in focus in dark mode */
@@ -126,7 +143,99 @@ body.dark-mode select option.selected {
     color: #f9f9f9; /* Light text for better contrast */
 }
 
-@media (max-width: 576px) {
+/* Navbar Styles */
+.navbar {
+    position: fixed; /* Make navbar fixed */
+    top: 0;
+    width: 100%;
+    z-index: 1030; /* Ensure it's above other elements */
+    border-bottom: 1px solid #e0e0e0; /* You may adjust the color */
+    opacity: 0.95;
+}
+
+.navbar .dropdown-menu {
+    background-color: #f9f9f9; /* Match the body background color */
+    border: 1px solid #e0e0e0; /* You may adjust the color */
+}
+
+.navbar.navbar-light .navbar-brand,
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+    color: #333; /* Match the text color */
+}
+
+/* More specific hover effect for navbar links */
+.navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #0073cf; /* Change to the desired hover color */
+}
+
+.navbar-toggler {
+    /* Remove custom hamburger icon styles */
+    padding: .25rem .5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+/* Use FontAwesome for hamburger icon */
+.navbar-toggler::before {
+    display: None;
+    content: '\f0c9'; /* FontAwesome bars icon */
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+
+/* Change the toggler icon when navbar is expanded */
+.navbar-toggler.collapsed::before {
+    content: '\f0c9'; /* Keep bars icon when collapsed */
+}
+
+/* Additional styles for navbar-brand */
+.navbar-brand {
+    font-size: 18px; /* Adjust the font size */
+    white-space: normal; /* Allow text wrapping */
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+    margin-right: 25px;
+  }
+
+/* Smooth transition for navbar collapse */
+.navbar-collapse.collapsing {
+    height: auto;
+    transition: max-height 0.1s ease;
+}
+
+/* Dark Mode Navbar Styles */
+body.dark-mode .navbar {
+    background-color: #333 !important; /* Dark background for navbar in dark mode */
+    border-color: #616161; /* Dark border for navbar in dark mode */
+}
+
+body.dark-mode .navbar .navbar-brand,
+body.dark-mode .navbar .navbar-nav .nav-item .nav-link {
+    color: #f9f9f9; /* Light color for contrast in dark mode */
+}
+
+/* Hover effect for navbar links in dark mode */
+body.dark-mode .navbar .navbar-nav .nav-item .nav-link:hover {
+    color: #cc0099; /* Change to the desired hover color for dark mode */
+}
+
+body.dark-mode .navbar .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23f9f9f9' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Ensure navbar is not overlapping the content */
+body {
+    padding-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+
+/* Small screens */
+@media (max-width: 991px) {
     h1 {
         font-size: 24px;
     }
@@ -138,5 +247,53 @@ body.dark-mode select option.selected {
 
     button, select, input[type="text"] {
         font-size: 14px;
+    }
+
+    /* Ensure the body content starts below the navbar */
+    body {
+        padding-top: 70px; /* Adjust based on the actual height of your navbar */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack the links vertically */
+    }
+
+    .navbar-nav .nav-item {
+        display: none; /* Hide the nav items initially */
+    }
+
+    .navbar-nav .nav-item.show {
+        display: block; /* Show nav items when toggler is clicked */
+        text-align: center;
+    }
+
+    .navbar-collapse.show .nav-item {
+        display: block; /* Ensure items are shown when navbar is expanded */
+        text-align: left;
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: block; /* Ensure items are shown when navbar is expanded */
+    }
+
+    .navbar .dark-mode-and-toggler,
+    .navbar .navbar-brand {
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .navbar .navbar-toggler {
+        flex-grow: 0;
+        margin-right: 5px; /* Adjust margin as needed */
+    }
+
+    .navbar .dark-mode-toggle {
+        position: static; /* Override the fixed positioning on small screens */
+    }
+
+    /* Navbar brand text smaller */
+    .navbar-brand {
+        font-size: 15px; /* Or any other size you prefer */
+        text-align: center;
     }
 }

@@ -1,19 +1,22 @@
-// Function to toggle dark mode
 function toggleDarkMode() {
     const body = document.body;
-    const darkModeToggle = document.getElementById("toggle-icon");
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
     body.classList.toggle("dark-mode");
+
     if (body.classList.contains("dark-mode")) {
-        darkModeToggle.classList.replace("fa-moon", "fa-sun");
+        darkModeToggle.querySelector('i').classList.replace("fa-moon", "fa-sun");
+        darkModeToggle.querySelector('i').classList.add("dark-mode-active");
         localStorage.setItem("darkMode", "enabled");
     } else {
-        darkModeToggle.classList.replace("fa-sun", "fa-moon");
+        darkModeToggle.querySelector('i').classList.replace("fa-sun", "fa-moon");
+        darkModeToggle.querySelector('i').classList.remove("dark-mode-active");
         localStorage.removeItem("darkMode");
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("toggle-icon");
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
 
     // Initial check for saved dark mode setting
     if (localStorage.getItem("darkMode") === "enabled") {

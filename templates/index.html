@@ -5,17 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>UN General Comments/Recommendations Browser</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 </head>
 <body>
-    <div class="dark-mode-toggle">
-        <i id="toggle-icon" class="fas fa-moon"></i>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  <a class="navbar-brand" href="#">UN General Comments/Recommendations</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <!-- Other nav items -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#collaboration">Collaboration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://lszoszk.github.io/">Contact</a>
+      </li>
+      <!-- Dark mode toggle as a menu item -->
+    <li class="nav-item">
+        <a id="dark-mode-toggle" href="javascript:void(0);">
+            <i class="fas fa-moon"></i>
+        </a>
+    </li>
+    </ul>
+  </div>
+</nav>
     <div class="container">
-        <h1>UN General Comments/Recommendations Browser</h1>
         <form action="/search" method="post">
             <input type="text" name="search_query" class="form-control" placeholder="Insert your keyword(s) here">
             <br>
@@ -65,18 +89,24 @@
             <button type="submit">Search</button>
             <br>
             <br>
-            <i>Only General Comments adopted by the Committee on the Rights of the Child and the Committee on Economic, Social and Cultural Rights are included in the database. More Treaty Bodies to be added soon.
+            <small><i>Only General Comments adopted by the Committee on the Rights of the Child and the Committee on Economic, Social and Cultural Rights are included in the database. More Treaty Bodies to be added soon.
             <br>
             <br>
-            For multi-word phrases, use quotation marks, e.g. "human rights".</i>
+            For multi-word phrases, use quotation marks, e.g. "human rights".</i></small>
         </form>
         <br>
         <small><em>Developed by <a href="https://prawo.amu.edu.pl/en/c/title/doctors/p/dr-lukasz-szoszkiewicz-2/">Łukasz Szoszkiewicz</a>. Version 2.0 (2 January 2024)</em></small>
     </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="{{ url_for('static', filename='js/script-index.js') }}"></script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('form[action="/search"]').addEventListener('submit', function(e) {
+
+    // Code to handle the form submission event for search
+    var searchForm = document.querySelector('form[action="/search"]');
+    if (searchForm) {
+        searchForm.addEventListener('submit', function(e) {
             var searchQuery = document.querySelector('input[name="search_query"]').value;
             var selectedFilters = document.querySelectorAll('select[name="labels[]"] option:checked, input[name="treatyBodies[]"]:checked').length;
 
@@ -86,7 +116,7 @@
                 return;
             }
         });
-    });
+    }
 </script>
 </body>
 </html>
