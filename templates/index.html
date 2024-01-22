@@ -8,9 +8,10 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-results.css') }}">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -23,6 +24,9 @@
       <!-- Other nav items -->
       <li class="nav-item">
         <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/corpus_viewer.html">Browse full texts</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#collaboration">Collaboration</a>
@@ -85,8 +89,7 @@
                 </div>
             </div>
         </div>
-            <br>
-            <button type="submit">Search</button>
+            <button class="analytics-toggle-button" type="submit">Search</button>
             <br>
             <br>
             <small><i>Only General Comments adopted by the Committee on the Rights of the Child and the Committee on Economic, Social and Cultural Rights are included in the database. More Treaty Bodies to be added soon.

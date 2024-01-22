@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, send_file
+from flask import Flask, render_template, request, send_file, jsonify
 import pandas as pd
 import json
 import os
@@ -35,8 +35,6 @@ custom_stopwords = load_custom_stopwords(custom_stopwords_path)
 nltk_stopwords = set(stopwords.words('english'))
 all_stopwords = nltk_stopwords.union(custom_stopwords)
 
-
-
 # Utility function for text formatting
 def format_text_for_display(text):
     if text is None:
@@ -50,6 +48,45 @@ grouped_results_global = None
 
 # Global cache for storing search results
 search_results_cache = {}
+
+def get_all_committees():
+    # Assuming gc_info is a list of dictionaries with committee information
+    return sorted(set(item['Committee'] for item in gc_info if 'Committee' in item))
+
+def get_documents_for_committee(committee):
+    documents = []
+    for item in gc_info:
+        if item.get('Committee') == committee:
+            # Example: Extract the filename from the file path
+            file_name = os.path.basename(item.get('File PATH', ''))
+            document_id, _ = os.path.splitext(file_name)
+            documents.append({
+                'name': item.get('Name', 'Unknown Document'),
+                'id': document_id  # Ensure this is the correct ID
+            })
+    return documents
+
+def get_document_content(document_id):
+    # Fetch additional details like title, signature, and date of adoption
+    additional_info = next((item for item in gc_info if item["File PATH"].endswith(document_id + '.json')), None)
+    title = additional_info.get('Name', 'Unknown Document') if additional_info else 'Unknown Document'
+    signature = additional_info.get('Signature', 'Unknown Signature') if additional_info else 'Unknown Signature'
+    adoption_year = additional_info.get('Adoption year', 'Unknown year') if additional_info else 'Unknown year'
+
+    json_dir = "json_data"
+    file_path = os.path.join(json_dir, document_id + '.json')
+    if os.path.exists(file_path):
+        with open(file_path, 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            paragraphs = [str(index + 1) + '. ' + (item.get('Text') or '') for index, item in enumerate(data)]
+            return {
+                'title': title,
+                'signature': signature,
+                'adoption_year': adoption_year,
+                'paragraphs': paragraphs
+            }
+    else:
+        return {'title': 'Document not found', 'paragraphs': []}
 
 @app.route('/')
 def index():
@@ -256,6 +293,22 @@ def export_to_excel():
 
     # Send the Excel file as a response
     return send_file(output, as_attachment=True, download_name="search_results.xlsx", mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+
+@app.route('/corpus_viewer.html')
+
+def corpus_viewer():
+    committees = get_all_committees()  # Function to get all committees
+    return render_template('corpus_viewer.html', committees=committees)
+
+@app.route('/get_documents/<committee>')
+def get_documents(committee):
+    documents = get_documents_for_committee(committee)  # Function to get documents for a committee
+    return jsonify(documents)
+
+@app.route('/get_document/<document_id>')
+def get_document(document_id):
+    document_content = get_document_content(document_id)
+    return jsonify(document_content)
 
 #if __name__ == '__main__': # This is for running the app locally and allowing external users to visit your localhost
 #    app.run(host='0.0.0.0', debug=True)

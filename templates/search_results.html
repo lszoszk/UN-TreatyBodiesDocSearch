@@ -4,22 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Search Results</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-results.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-results.css') }}">
 </head>
 <body>
-    <div class="dark-mode-toggle">
-        <i id="toggle-icon" class="fas fa-moon"></i> <!-- Default icon for light mode -->
-    </div>
-    <div class="my-custom-container">
-        <h1>Search results</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+  <a class="navbar-brand" href="/">UN General Comments/Recommendations</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <!-- Other nav items -->
+      <li class="nav-item">
+        <a class="nav-link" href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#collaboration">Collaboration</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://lszoszk.github.io/">Contact</a>
+      </li>
+      <!-- Dark mode toggle as a menu item -->
+    <li class="nav-item">
+        <a id="dark-mode-toggle" href="javascript:void(0);">
+            <i class="fas fa-moon"></i>
+        </a>
+    </li>
+    </ul>
+  </div>
+</nav>
+<div class="my-custom-container">
         <div>
-        <a class="export-btn" href="/">Main Site</a>
         <button class="export-btn" id="exportToExcelBtn">Export</button>
         <button class="export-btn" id="toggle-all">Expand All</button>
         <button class="analytics-toggle-button">Analytics</button>
@@ -110,8 +132,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-document.addEventListener("DOMContentLoaded", function() {
-        // Store the original hits count for each document
+    document.addEventListener("DOMContentLoaded", function() {
+                // Store the original hits count for each document
     document.querySelectorAll('.card').forEach(card => {
         const cardHeader = card.querySelector('.card-header');
         const docNameElement = cardHeader.querySelector('.card-link'); // Adjust selector as needed
@@ -123,57 +145,80 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Cache DOM elements for efficiency
-    const darkModeToggle = document.getElementById("toggle-icon");
     const body = document.body;
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
     const toggleAllButton = document.getElementById('toggle-all');
     const toggleButton = document.querySelector('.analytics-toggle-button');
     const analyticsContainer = document.querySelector('.analytics-container');
     const searchInput = document.getElementById('paragraphSearch');
+    const initialTotalHits = {{ total_hits }}; // Replace with server-side value
 
-    // Initialize the initial total hits with the server-side provided value
-    const initialTotalHits = {{ total_hits }};
-
-    // Toggle dark mode functionality
-    function toggleDarkMode() {
-        body.classList.toggle("dark-mode");
-        darkModeToggle.classList.toggle("fa-sun");
-        darkModeToggle.classList.toggle("fa-moon");
-        localStorage.setItem("darkMode", body.classList.contains("dark-mode") ? "enabled" : "disabled");
+    // Function to set dark mode preference
+    function setDarkModePreference(isDarkMode) {
+        localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
     }
 
-    // Check and set dark mode on load
-    if (localStorage.getItem("darkMode") === "enabled") {
-        body.classList.add("dark-mode");
-        darkModeToggle.classList.replace("fa-moon", "fa-sun");
+    // Function to apply dark mode based on preference
+    function applyDarkModePreference() {
+        const isDarkMode = localStorage.getItem('darkMode') === 'enabled';
+
+        if (isDarkMode) {
+            document.body.classList.add('dark-mode');
+        }
     }
 
-    darkModeToggle.addEventListener("click", toggleDarkMode);
+    // Check if the user has a preference and apply it
+    applyDarkModePreference();
+
+function toggleDarkMode() {
+    const body = document.body;
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+        darkModeToggle.querySelector('i').classList.replace("fa-moon", "fa-sun");
+        darkModeToggle.querySelector('i').classList.add("dark-mode-active");
+        localStorage.setItem("darkMode", "enabled");
+    } else {
+        darkModeToggle.querySelector('i').classList.replace("fa-sun", "fa-moon");
+        darkModeToggle.querySelector('i').classList.remove("dark-mode-active");
+        localStorage.removeItem("darkMode");
+    }
+}
+
+    // Event listener for the dark mode toggle click
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener("click", toggleDarkMode);
+    }
 
     // Toggle all functionality for accordion
     let isExpanded = false;
-    toggleAllButton.addEventListener('click', function() {
-        document.querySelectorAll('#accordion .collapse').forEach(element => {
-            let currentState = element.classList.contains('show');
-            if (isExpanded && currentState || !isExpanded && !currentState) {
-                new bootstrap.Collapse(element, { toggle: true });
-            }
+    if (toggleAllButton) {
+        toggleAllButton.addEventListener('click', function() {
+            document.querySelectorAll('#accordion .collapse').forEach(element => {
+                let currentState = element.classList.contains('show');
+                if (isExpanded && currentState || !isExpanded && !currentState) {
+                    new bootstrap.Collapse(element, { toggle: true });
+                }
+            });
+            isExpanded = !isExpanded;
+            toggleAllButton.textContent = isExpanded ? 'Collapse All' : 'Expand All';
         });
-        isExpanded = !isExpanded;
-        toggleAllButton.textContent = isExpanded ? 'Collapse All' : 'Expand All';
-    });
+    }
 
     // Toggle analytics container with smooth effect
-    toggleButton.addEventListener('click', function() {
-        analyticsContainer.classList.toggle('visible');
-        if (analyticsContainer.classList.contains('visible')) {
-            let scrollHeight = analyticsContainer.scrollHeight;
-            analyticsContainer.style.height = scrollHeight + "px";
-        } else {
-            analyticsContainer.style.height = 0;
-        }
-        toggleButton.classList.toggle('active');
-    });
+    if (toggleButton && analyticsContainer) {
+        toggleButton.addEventListener('click', function() {
+            analyticsContainer.classList.toggle('visible');
+            if (analyticsContainer.classList.contains('visible')) {
+                let scrollHeight = analyticsContainer.scrollHeight;
+                analyticsContainer.style.height = scrollHeight + "px";
+            } else {
+                analyticsContainer.style.height = 0;
+            }
+            toggleButton.classList.toggle('active');
+        });
+    }
 
     // Copy to clipboard functionality
     function copyToClipboard(text, button) {
@@ -197,25 +242,28 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Export to Excel button functionality
-    document.getElementById('exportToExcelBtn').addEventListener('click', function() {
-        var searchKey = "{{ search_key }}";
-        var form = document.createElement('form');
-        form.method = 'POST';
-        form.action = '/export_to_excel';
-        form.style.display = 'none';
+    const exportButton = document.getElementById('exportToExcelBtn');
+    if (exportButton) {
+        exportButton.addEventListener('click', function() {
+            var searchKey = "{{ search_key }}"; // Replace with actual search key passed from Flask
+            var form = document.createElement('form');
+            form.method = 'POST';
+            form.action = '/export_to_excel';
+            form.style.display = 'none';
 
-        var input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = 'search_key';
-        input.value = searchKey;
-        form.appendChild(input);
+            var input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'search_key';
+            input.value = searchKey;
+            form.appendChild(input);
 
-        document.body.appendChild(form);
-        form.submit();
-        document.body.removeChild(form);
-    });
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+        });
+    }
 
-    // Function to highlight dynamic search terms
+        // Function to highlight dynamic search terms
     function highlightDynamicText(element, query) {
         if (!query) return; // Don't proceed if query is empty
 
@@ -235,125 +283,87 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-// Event listener for the search input
-searchInput.addEventListener("input", function () {
-    const query = this.value.toLowerCase();
-    let overallMatchingHits = 0; // To keep track of matching hits across all documents
+    // Event listener for the search input
+    if (searchInput) {
+        searchInput.addEventListener("input", function () {
+            const query = this.value.toLowerCase();
+            let overallMatchingHits = 0; // To keep track of matching hits across all documents
 
-    if (query.length >= 4) {
-        document.querySelectorAll('.card').forEach(card => {
-            let matchingHitsInDoc = 0; // To track hits in each individual document
+            if (query.length >= 4) {
+                document.querySelectorAll('.card').forEach(card => {
+                    let matchingHitsInDoc = 0; // To track hits in each individual document
 
-            card.querySelectorAll(".result-item").forEach(paragraph => {
-                const textElement = paragraph.querySelector(".paragraph-text");
-                const text = textElement.textContent.toLowerCase();
+                    card.querySelectorAll(".result-item").forEach(paragraph => {
+                        const textElement = paragraph.querySelector(".paragraph-text");
+                        const text = textElement.textContent.toLowerCase();
 
-                if (text.includes(query)) {
-                    matchingHitsInDoc++;
-                    highlightDynamicText(textElement, query);
-                    paragraph.style.display = "block";
-                } else {
-                    paragraph.style.display = "none";
-                }
-            });
+                        if (text.includes(query)) {
+                            matchingHitsInDoc++;
+                            highlightDynamicText(textElement, query);
+                            paragraph.style.display = "block";
+                        } else {
+                            paragraph.style.display = "none";
+                        }
+                    });
 
-            // Update the overall matching hits count
-            overallMatchingHits += matchingHitsInDoc;
+                    // Update the overall matching hits count
+                    overallMatchingHits += matchingHitsInDoc;
 
-            // Update hits count for each document
-            const cardHeader = card.querySelector('.card-header');
-            const docNameElement = cardHeader.querySelector('.card-link');
-            if (docNameElement) {
-                const docNameContent = docNameElement.innerHTML;
-                const updatedContent = docNameContent.replace(/(\(.*? hits\))/, `(${matchingHitsInDoc} hits)`);
-                docNameElement.innerHTML = updatedContent;
-            }
-        });
-
-        // Calculate and update the overall hits count and percentage
-        let hitsPercentage = (overallMatchingHits / initialTotalHits * 100).toFixed(2) + '%';
-        const totalHitsElement = document.getElementById("hits-count");
-        totalHitsElement.innerHTML = `<small>Hits: ${overallMatchingHits} paragraphs, ${hitsPercentage} of initial results</small>`;
-
-    } else {
-        // Reset view if query is cleared or too short
-        if (query.length < 4) {
-            clearDynamicHighlights();
-            document.querySelectorAll('.card').forEach(card => {
-                card.querySelectorAll(".result-item").forEach(paragraph => {
-                    paragraph.style.display = "block"; // Show all paragraphs
+                    // Update hits count for each document
+                    const cardHeader = card.querySelector('.card-header');
+                    const docNameElement = cardHeader.querySelector('.card-link');
+                    if (docNameElement) {
+                        const docNameContent = docNameElement.innerHTML;
+                        const updatedContent = docNameContent.replace(/(\(.*? hits\))/, `(${matchingHitsInDoc} hits)`);
+                        docNameElement.innerHTML = updatedContent;
+                    }
                 });
 
-                // Use the stored original hits count for each document
-                const cardHeader = card.querySelector('.card-header');
-                const docNameElement = cardHeader.querySelector('.card-link');
-                if (docNameElement) {
-                    const originalHits = card.getAttribute('data-original-hits');
-                    const updatedContent = docNameElement.innerHTML.replace(/(\(.*? hits\))/, `(${originalHits} hits)`);
-                    docNameElement.innerHTML = updatedContent;
-                }
-            });
+                // Calculate and update the overall hits count and percentage
+                let hitsPercentage = (overallMatchingHits / initialTotalHits * 100).toFixed(2) + '%';
+                const totalHitsElement = document.getElementById("hits-count");
+                totalHitsElement.innerHTML = `<small>Hits: ${overallMatchingHits} paragraphs, ${hitsPercentage} of initial results</small>`;
 
-            // Reset overall hits count and percentage to initial state
-            const totalHitsElement = document.getElementById("hits-count");
-            totalHitsElement.innerHTML = `<small>Hits: ${initialTotalHits} paragraphs, 100% of initial results</small>`;
-        }
+            } else {
+                // Reset view if query is cleared or too short
+                clearDynamicHighlights();
+                document.querySelectorAll('.card').forEach(card => {
+                    card.querySelectorAll(".result-item").forEach(paragraph => {
+                        paragraph.style.display = "block"; // Show all paragraphs
+                    });
+
+                    // Use the stored original hits count for each document
+                    const cardHeader = card.querySelector('.card-header');
+                    const docNameElement = cardHeader.querySelector('.card-link');
+                    if (docNameElement) {
+                        const originalHits = card.getAttribute('data-original-hits');
+                        const updatedContent = docNameElement.innerHTML.replace(/(\(.*? hits\))/, `(${originalHits} hits)`);
+                        docNameElement.innerHTML = updatedContent;
+                    }
+                });
+
+                // Reset overall hits count and percentage to initial state
+                const totalHitsElement = document.getElementById("hits-count");
+                totalHitsElement.innerHTML = `<small>Hits: ${initialTotalHits} paragraphs, 100% of initial results</small>`;
+            }
+        });
     }
 
-        // Function to clear highlights from paragraphs
-        function clearHighlights() {
-            document.querySelectorAll('.highlight-dynamic').forEach(span => {
-                span.outerHTML = span.textContent; // Replace span with just its text
-            });
-        }
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    if (scrollToTopBtn) {
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
 
-        // Function to expand or collapse all paragraphs
-        function expandAllParagraphs(expand) {
-            const paragraphs = document.querySelectorAll(".result-item");
-
-            paragraphs.forEach((paragraph) => {
-                if (expand) {
-                    paragraph.style.display = "block"; // Show all paragraphs
-                } else {
-                    paragraph.style.display = "none"; // Hide all paragraphs
-                }
-            });
-        }
-
-        // Function to expand or collapse all paragraphs
-        function expandAllParagraphs(expand) {
-            const paragraphs = document.querySelectorAll(".result-item");
-
-            paragraphs.forEach((paragraph) => {
-                if (expand) {
-                    paragraph.style.display = "block"; // Show all paragraphs
-                } else {
-                    paragraph.style.display = "none"; // Hide all paragraphs
-                }
-            });
-        }
-    });
-
-    // Get the button
-    var mybutton = document.getElementById("scrollToTopBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {
-        scrollFunction();
-    };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
-        }
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });
     }
-
-    // When the user clicks on the button, scroll to the top of the document smoothly
-    mybutton.addEventListener('click', function() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    });
 });
 
 </script>
