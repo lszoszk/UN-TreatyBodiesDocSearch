@@ -42,8 +42,8 @@ def annotate_paragraphs(paragraphs):
     return annotated_paragraphs
 
 # Specify the directories containing JSON files and for saving annotated files
-json_dir = "C:\\Users\\lszos\\Desktop\\UAM\\GC DATABASE\\JSON ONLY"
-annotated_json_dir = "C:\\Users\\lszos\\Desktop\\UAM\\GC DATABASE\\JSON ANNOTATED"
+json_dir = "C:\\Users\\lszos\\Downloads\\JSON-clean"
+annotated_json_dir = "C:\\Users\\lszos\\Downloads\\JSON-clean\\JSON-annotated"
 
 # Create the directory for annotated files if it doesn't exist
 if not os.path.exists(annotated_json_dir):

@@ -310,6 +310,10 @@ def get_document(document_id):
     document_content = get_document_content(document_id)
     return jsonify(document_content)
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 #if __name__ == '__main__': # This is for running the app locally and allowing external users to visit your localhost
 #    app.run(host='0.0.0.0', debug=True)
 
