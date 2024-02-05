@@ -8,7 +8,7 @@
             padding-bottom: 20px;/* Add padding for a nicer look */
             background-color: #f4f5f7; /* Light background color for the sidebar */
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-            height: 100vh; /* Full viewport height */
+            height: 90vh; /* Full viewport height */
             overflow-y: auto; /* Make it scrollable */
         }
         .document-viewer {
@@ -39,7 +39,6 @@
     }
 .document-search-container {
     position: fixed;
-    top: 56px; /* Adjust based on the height of your navbar */
     left: 22%; /* Align with the left margin of the document viewer */
     width: 78%; /* Adjust to match the width of the document viewer */
     padding: 10px 20px;

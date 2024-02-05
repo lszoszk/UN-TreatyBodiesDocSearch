@@ -102,15 +102,14 @@ def extract_treaty_bodies_from_filename(filename):
     # Check if any known treaty body abbreviation is in the filename
     return [tb for tb in known_treaty_bodies if tb in filename]
 
-@app.route('/search', methods=['POST'])
+@app.route('/search', methods=['GET'])
 def search():
-
-    raw_query = request.form['search_query'].strip().lower()
-    selected_labels = request.form.getlist('labels[]')
+    raw_query = request.args.get('search_query', '').strip().lower()
+    selected_labels = request.args.getlist('labels[]')
     selected_labels = [label.lower() for label in selected_labels]
 
-    # Retrieve the selected treaty body from the form
-    selected_treaty_bodies = request.form.getlist('treatyBodies[]')
+    # Retrieve the selected treaty body from the form (query parameters)
+    selected_treaty_bodies = request.args.getlist('treatyBodies[]')
 
     # Extract n-grams in quotation marks and individual words
     ngrams = re.findall(r'"([^"]+)"', raw_query)
