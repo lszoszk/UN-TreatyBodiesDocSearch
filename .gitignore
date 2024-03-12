@@ -119,6 +119,9 @@ fabric.properties
 __pycache__/
 cache/
 venv/
+json_meilisearch
 
 # Files
 templates/corpus_viewer.html
+meiliapp.py
+pdftojson.py
