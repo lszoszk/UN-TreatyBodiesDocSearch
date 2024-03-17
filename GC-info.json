@@ -1,12 +1,12 @@
 [
     {
-      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC-GC18-Harmful-REV.json",
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CRC_CEDAW-GC18-Harmful-REV.json",
       "Name": "[REVISED] Joint General Recommendation No. 31 of the CEDAW / General Comment No. 18 of the CRC: Harmful practices",
       "Simplified Name": "CRC GC18/CEDAW GR31: Harmful practices [Revised]",
       "Signature": "CEDAW/C/GC/31/Rev.1–CRC/C/GC/18/Rev.1",
-      "Adoption Date": 43593,
+      "Adoption Date": "8 May 2019",
       "Adoption year": 2019,
-      "Committee": "CRC",
+      "Committee": "CRC, CEDAW",
       "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F31%2FREV.1&Lang=en"
     },
     {
@@ -451,7 +451,7 @@
     },
     {
       "File PATH": "/home/lszoszk/mysite/json_data/Annotated_ESCR-GC8-Sanctions.json",
-      "Name": "General comment No. 8: The relationship between economic sanctions and respect for economic, social and cultural rights",
+      "Name": "General Comment No. 8: The relationship between economic sanctions and respect for economic, social and cultural rights",
       "Simplified Name": "GC8: The relationship between economic sanctions and respect for economic, social and cultural rights",
       "Signature": "E/C.12/1997/8",
       "Adoption Date": 35776,
@@ -528,5 +528,385 @@
       "Adoption year": 1981,
       "Committee": "ESCR",
       "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCESCR%2FGEC%2F4756&Lang=en"
-    }
+    },
+      {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GC39-Indigenous.json",
+    "Name": "General recommendation No. 39 (2022) on the rights of Indigenous women and girls",
+    "Simplified Name": "GR39: Indigenous women and girls ",
+    "Signature": "CEDAW/C/GC/39",
+    "Adoption Date": "31 October 2022",
+    "Adoption year": "2022",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F39&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GC38-Trafficking.json",
+    "Name": "General recommendation No. 38 (2020) on trafficking in women and girls in the context of global migration ",
+    "Simplified Name": "GR:38: trafficking in women and girls in the context of global migration ",
+    "Signature": "CEDAW/C/GC/38",
+    "Adoption Date": "20 November 2020",
+    "Adoption year": "2020",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F38&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GC37-Climate.json",
+    "Name": "General Recommendation No. 37 on Gender-related dimensions of disaster risk reduction in the context of climate change",
+    "Simplified Name": "GR37: Gender-related dimensions of disaster risk reduction in the context of climate change",
+    "Signature": "CEDAW/C/GC/37",
+    "Adoption Date": "13 March 2018",
+    "Adoption year": "2018",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F37&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GC36-Education.json",
+    "Name": "General recommendation No. 36 (2017) on the right of girls and women to education ",
+    "Simplified Name": "GR36: the right of girls and women to education ",
+    "Signature": "CEDAW/C/GC/36",
+    "Adoption Date": "27 November 2017",
+    "Adoption year": "2017",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F36&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GC35-GBV.json",
+    "Name": "General recommendation No. 35 on gender-based violence against women, updating general recommendation No. 19",
+    "Simplified Name": "GR35: gender-based violence against women",
+    "Signature": "CEDAW/C/GC/35",
+    "Adoption Date": "26 July 2017",
+    "Adoption year": "2017",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F35&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR34-rural.json",
+    "Name": "General recommendation No. 34 on the rights of rural women",
+    "Simplified Name": "GR34: the rights of rural women",
+    "Signature": "CEDAW/C/GC/34",
+    "Adoption Date": "7 March 2016",
+    "Adoption year": "2016",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F34&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR33-access_to_justice.json",
+    "Name": "General recommendation No. 33 on women's access to justice",
+    "Simplified Name": "GR33: women's access to justice",
+    "Signature": "CEDAW/C/GC/33",
+    "Adoption Date": "3 August 2015",
+    "Adoption year": "2015",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F33&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR32-refugee.json",
+    "Name": "General recommendation No. 32 on the gender-related dimensions of refugee status, asylum, nationality and statelessness of women",
+    "Simplified Name": "GR32: gender-related dimensions of refugee status, asylum, nationality and statelessness of women",
+    "Signature": "CEDAW/C/GC/32",
+    "Adoption Date": "14 November 2014",
+    "Adoption year": "2014",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F32&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR30-conflict.json",
+    "Name": "General recommendation No. 30 on women in conflict prevention, conflict and post-conflict situations",
+    "Simplified Name": "GR30: women in conflict prevention, conflict and post-conflict situations",
+    "Signature": "CEDAW/C/GC/30",
+    "Adoption Date": "1 November 2013",
+    "Adoption year": "2013",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F30&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR29-Article16.json",
+    "Name": "General recommendation No. 29 on article 16 of the Convention on the Elimination of All Forms of Discrimination against Women (Economic consequences of marriage, family relations and their dissolution)",
+    "Simplified Name": "GR29: Article 16 - Economic consequences of marriage, family relations and their dissolution",
+    "Signature": "CEDAW/C/GC/29",
+    "Adoption Date": "13 October 2013",
+    "Adoption year": "2013",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F29&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR28-art.2.json",
+    "Name": "General recommendation No. 28 on the core obligations of States parties under article 2 of the Convention  on the Elimination of All Forms of Discrimination against Women ",
+    "Simplified Name": "GR28: the core obligations of States parties under article 2",
+    "Signature": "CEDAW/C/GC/28",
+    "Adoption Date": "16 December 2010",
+    "Adoption year": "2010",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F28&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR27-older_women.json",
+    "Name": "General recommendation No. 27: Older women and protection of their human rights",
+    "Simplified Name": "GR27: older women and protection of their human rights",
+    "Signature": "CEDAW/C/GC/27",
+    "Adoption Date": "16 December 2010",
+    "Adoption year": "2010",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F27&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR26-migrants.json",
+    "Name": "General recommendation No. 26 on women migrant workers",
+    "Simplified Name": "GR26: women migrant workers",
+    "Signature": "CEDAW/2009/WP.1/R",
+    "Adoption Date": "5 December 2008",
+    "Adoption year": "2008",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2F2009%2FWP.1%2FR&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR25-TSM2.json",
+    "Name": "General recommendation No. 25: Article 4, paragraph 1, of the Convention (temporary special measures)",
+    "Simplified Name": "GR25: temporary special measures",
+    "Signature": "A/59/38",
+    "Adoption Date": "23 July 2004",
+    "Adoption year": "2004",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F3733&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR24-health.json",
+    "Name": "General recommendation No. 24: Article 12 of the Convention (women and health)",
+    "Simplified Name": "GR24: women and health ",
+    "Signature": "A/54/38/Rev.1, chap. 1",
+    "Adoption Date": "5 February 1999",
+    "Adoption year": "1999",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F4738&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR23-political_public_life.json",
+    "Name": "General recommendation No. 23: Political and public life",
+    "Simplified Name": "GR23: political and public life",
+    "Signature": "A/52/38",
+    "Adoption Date": "12 August 1997",
+    "Adoption year": "1997",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/TBSearch.aspx?Lang=en&TreatyID=3&DocTypeID=11"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR22-amendingArt22.json",
+    "Name": "General recommendation No. 22: Amending Article 20 of the Convention",
+    "Simplified Name": "GR22: amending article 20 ",
+    "Signature": "A/50/38",
+    "Adoption Date": "18 July 1996",
+    "Adoption year": "1996",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F4734&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR21-family.json",
+    "Name": "General recommendation No. 21: Equality in marriage and family relations",
+    "Simplified Name": "GR21: equality in marriage and family relations",
+    "Signature": "A/49/38",
+    "Adoption Date": "12 April 1994",
+    "Adoption year": "1994",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F4733&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR20-reservations.json",
+    "Name": "General recommendation No. 20: Reservations to the Convention ",
+    "Simplified Name": "GR20: reservations to the convention",
+    "Signature": "A/47/38",
+    "Adoption Date": "30 January 1992",
+    "Adoption year": "1992",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F4730&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR19_violence.json",
+    "Name": "General recommendation No. 19: Violence against women",
+    "Simplified Name": "GR19: violence against women",
+    "Signature": "A/47/38",
+    "Adoption Date": "30 January 1992",
+    "Adoption year": "1992",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F3731&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR18_disabled.json",
+    "Name": "General recommendation No. 18: Disabled women",
+    "Simplified Name": "GR18: disabled women ",
+    "Signature": "A/46/38",
+    "Adoption Date": "30 January 1992",
+    "Adoption year": "1992",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F4729&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR17_measurement.json",
+    "Name": "General recommendation No. 17: Measurement and quantification of the unremunerated domestic activities of women and their recognition in the gross national product",
+    "Simplified Name": "GR17: Measurement and quantification of the unremunerated domestic activities of women and their recognition in the gross national product",
+    "Signature": "A/46/38",
+    "Adoption Date": "30 January 1992",
+    "Adoption year": "1992",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5833&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR16_unpaid_women_workers.json",
+    "Name": "General recommendation No. 16: Unpaid women workers in rural and urban family enterprises",
+    "Simplified Name": "GR16: unpaid women workers in rural and urban family enterprises",
+    "Signature": "A/46/38",
+    "Adoption Date": "30 January 1992",
+    "Adoption year": "1992",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F3730&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR15_AIDS.json",
+    "Name": "General recommendation No. 15: Avoidance of discrimination against women in national strategies for the prevention and control of acquires immunodeficiency syndrom (AIDS)",
+    "Simplified Name": "GR15: avoidance of discrimination against women in national strategies for the prevention and control of AIDS",
+    "Signature": "A/45/38",
+    "Adoption Date": "6 June 1990",
+    "Adoption year": "1990",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F4726&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR14_circumcision.json",
+    "Name": "General recommendation No. 14: Female circumcision ",
+    "Simplified Name": "GR14: female circumcision",
+    "Signature": "A/45/38",
+    "Adoption Date": "6 June 1990",
+    "Adoption year": "1990",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F3729&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR13_remuneration.json",
+    "Name": "General recommendation No. 13: Equal remuneration for work of equal value",
+    "Simplified Name": "GR13: equal remuneration for work of equal value",
+    "Signature": "A/44/38",
+    "Adoption Date": "13 February 1990",
+    "Adoption year": "1990",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5832&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR12_VAW.json",
+    "Name": "General recommendation No. 12: Violence against women ",
+    "Simplified Name": "GR12: violence against women",
+    "Signature": "A/44/38",
+    "Adoption Date": "13 February 1990",
+    "Adoption year": "1990",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5831&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR11_technical_advisory_services.json",
+    "Name": "General recommendation No. 11: Technical advisory services for reporting obligations",
+    "Simplified Name": "GR11: technical advisory services for reporting obligations",
+    "Signature": "A/44/38",
+    "Adoption Date": "13 February 1990",
+    "Adoption year": "1990",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5830&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR10_tenth_anniversary.json",
+    "Name": "General recommendation No. 10: Tenth anniversary of the adoption of CEDAW",
+    "Simplified Name": "GR10: tenth anniversary of the adoption of CEDAW",
+    "Signature": "A/44/38",
+    "Adoption Date": "13 February 1990",
+    "Adoption year": "1990",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F3728&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR9_statisticaldata.json",
+    "Name": "General recommendation No. 9: Statistical data",
+    "Simplified Name": "GR9: statistical data",
+    "Signature": "A/44/38",
+    "Adoption Date": "13 February 1990",
+    "Adoption year": "1990",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F3724&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR8_art.8.json",
+    "Name": "General recommendation No. 8: Implementation of article 8 of the Convention ",
+    "Simplified Name": "GR8: implementation of article 8 of the Convention ",
+    "Signature": "A/43/38",
+    "Adoption Date": "14 June 1988",
+    "Adoption year": "1988",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F3727&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR7_resources.json",
+    "Name": "General recommendation No. 7: Resources",
+    "Simplified Name": "GR7: resources",
+    "Signature": "A/43/38",
+    "Adoption Date": "14 June 1988",
+    "Adoption year": "1988",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5829&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR6_national_machinery.json",
+    "Name": "General recommendation No. 6: Effective national machinery and publicity",
+    "Simplified Name": "GR6: effective national machinery and publicity",
+    "Signature": "A/43/38",
+    "Adoption Date": "14 June 1988",
+    "Adoption year": "1988",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5828&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR5_TSM1.json",
+    "Name": "General recommendation No. 5: temporary special measures",
+    "Simplified Name": "GR5: temporary special measures",
+    "Signature": "A/43/38",
+    "Adoption Date": "14 June 1988",
+    "Adoption year": "1988",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5827&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR4_reservations.json",
+    "Name": "General recommendation No. 4: Reservations",
+    "Simplified Name": "GR4: reservations",
+    "Signature": "A/42/38",
+    "Adoption Date": "15 May 1987",
+    "Adoption year": "1987",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5826&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR3_campaigns_edu.json",
+    "Name": "General recommendation No. 3: Education and public information programmes ",
+    "Simplified Name": "GR3: education and public information programmes",
+    "Signature": "A/42/38",
+    "Adoption Date": "15 May 1987",
+    "Adoption year": "1987",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F5825&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR2_reporting.json",
+    "Name": "General recommendation No. 2: Reporting guidelines",
+    "Simplified Name": "GR2: reporting guidelines",
+    "Signature": "A/42/38",
+    "Adoption Date": "15 May 1987",
+    "Adoption year": "1987",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F3726&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW_GR1_Reporting.json",
+    "Name": "General recommendation No. 1: Reporting by States Parties",
+    "Simplified Name": "GR1: reporting by States Parties",
+    "Signature": "A/41/38",
+    "Adoption Date": "4 April 1986",
+    "Adoption year": "1986",
+    "Committee": "CEDAW",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F4724&Lang=en"
+  }
   ]

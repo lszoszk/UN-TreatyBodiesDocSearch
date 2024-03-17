@@ -29,6 +29,7 @@ def annotate_paragraphs(paragraphs):
             print(f"Expected a dictionary, but got {type(paragraph)}: {paragraph}")
             continue
         labels = []
+        paragraph = {k.strip(): v for k, v in paragraph.items()}
         text_key = 'Text' if 'Text' in paragraph else 'text'
         text_content = paragraph.pop(text_key, None)
         if text_content:
@@ -42,8 +43,8 @@ def annotate_paragraphs(paragraphs):
     return annotated_paragraphs
 
 # Specify the directories containing JSON files and for saving annotated files
-json_dir = "C:\\Users\\lszos\\Downloads\\JSON-clean"
-annotated_json_dir = "C:\\Users\\lszos\\Downloads\\JSON-clean\\JSON-annotated"
+json_dir = "C:\\Users\\lszos\\Downloads\\CEDAWtest"
+annotated_json_dir = "C:\\Users\\lszos\\Downloads\\CEDAWannotated"
 
 # Create the directory for annotated files if it doesn't exist
 if not os.path.exists(annotated_json_dir):

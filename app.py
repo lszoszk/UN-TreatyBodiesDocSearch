@@ -50,19 +50,23 @@ grouped_results_global = None
 search_results_cache = {}
 
 def get_all_committees():
-    # Assuming gc_info is a list of dictionaries with committee information
-    return sorted(set(item['Committee'] for item in gc_info if 'Committee' in item))
+    committees = set()
+    for item in gc_info:
+        if 'Committee' in item:
+            [committees.add(committee.strip()) for committee in item['Committee'].split(',')]
+    return sorted(committees)
 
 def get_documents_for_committee(committee):
     documents = []
     for item in gc_info:
-        if item.get('Committee') == committee:
-            # Example: Extract the filename from the file path
+        committees = [x.strip() for x in item.get('Committee', '').split(',')]
+        if committee in committees:
             file_name = os.path.basename(item.get('File PATH', ''))
             document_id, _ = os.path.splitext(file_name)
             documents.append({
                 'name': item.get('Name', 'Unknown Document'),
-                'id': document_id  # Ensure this is the correct ID
+                'id': document_id,
+                'committee': ', '.join(committees)
             })
     return documents
 
