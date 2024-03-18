@@ -185,6 +185,12 @@ body.dark-mode {
     color: #f9f9f9;
 }
 
+body.dark-mode .form-control, body.dark-mode #paragraphSearch {
+    background-color: #151515; /* Match this to your dark mode background color */
+    color: #f9f9f9; /* This is for text color to ensure readability */
+    border-color: #f9f9f9; /* Optionally adjust this to match your design */
+}
+
 body.dark-mode h1,
 body.dark-mode a,
 body.dark-mode .dark-mode-toggle {
