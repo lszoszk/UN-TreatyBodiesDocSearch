@@ -15,7 +15,7 @@ keyword_to_label = {
     "Indigenous peoples": ["indigenous", "tribal", "aboriginal"],
     "Migrants": ["migrant", "migrants", "migrant workers", "migrant worker", "migratory", "migration"],
     "Women/girls": ["woman", "women", "girl", "girls", "gender", "female"],
-    "Children": ["child", "children"],
+    "Children": ["child", "children", "girl", "girls", "boys", "boy"],
     "Adolescents": ["adolescent", "adolescents", "youth", "young people", "young person", "young persons"],
     "Persons with disabilities": ["disability", "disabilities", "disabled", "handicap", "handicapped", "impairment", "impairments", "impair", "impairs", "impairing", "impairments"],
     "Persons in street situations": ["street", "homeless", "homelessness", "vagrant", "vagrancy"]
