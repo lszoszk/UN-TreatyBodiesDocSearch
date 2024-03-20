@@ -70,7 +70,12 @@
                     <h2 class="analytics-header">Summary</h2>
                     <p><strong>Most active Treaty Bodies <small>(hits)</small>:</strong>
                         {% for committee, count in committees_with_hits %}
-                            {{ committee }} ({{ count }}){% if not loop.last %}, {% endif %}
+                            {% if ',' in committee %}
+                                {{ committee.replace(',', ' &') }}
+                            {% else %}
+                                {{ committee }}
+                            {% endif %}
+                            ({{ count }}){% if not loop.last %}, {% endif %}
                         {% endfor %}
                     </p>
                     <p id="concerned-groups-summary"><strong>Most concerned groups/persons <small>(hits)</small>:</strong>
