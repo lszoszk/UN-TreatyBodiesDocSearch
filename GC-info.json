@@ -570,7 +570,7 @@
     "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CEDAW%2FC%2FGC%2F36&Lang=en"
   },
   {
-    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GC35-GBV.json",
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR35-GBV.json",
     "Name": "General recommendation No. 35 on gender-based violence against women, updating general recommendation No. 19",
     "Simplified Name": "GR35: gender-based violence against women",
     "Signature": "CEDAW/C/GC/35",
@@ -612,7 +612,7 @@
   {
     "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CEDAW-GR30-conflict.json",
     "Name": "General recommendation No. 30 on women in conflict prevention, conflict and post-conflict situations",
-    "Simplified Name": "GR30: women in conflict prevention, conflict and post-conflict situations",
+    "Simplified Name": "GR30: women in conflict prevention, confilct and post-conflict situations",
     "Signature": "CEDAW/C/GC/30",
     "Adoption Date": "1 November 2013",
     "Adoption year": "2013",
@@ -908,5 +908,375 @@
     "Adoption year": "1986",
     "Committee": "CEDAW",
     "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCEDAW%2FGEC%2F4724&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC37_assembly.json",
+    "Name": "General Comment No. 37 (2020) on the right of peaceful assembly (article 21)",
+    "Simplified Name": "GC37: the right of peaceful assembly (article 21)",
+    "Signature": "CCPR/C/GC/37",
+    "Adoption Date": "17 September 2020",
+    "Adoption year": 2020,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2FGC%2F37&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC36_life.json",
+    "Name": "General Comment No. 36: Article 6: right to life",
+    "Simplified Name": "GC36: article 6: right to life",
+    "Signature": "CCPR/C/GC/36",
+    "Adoption Date": "3 September 2019",
+    "Adoption year": 2019,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2FGC%2F36&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC35_article9.json",
+    "Name": "General Comment No. 35: Article 9 (Liberty and security of a person)",
+    "Simplified Name": "GC35: article 9 (liberty and security of a person)",
+    "Signature": "CCPR/C/GC/35",
+    "Adoption Date": "16 December 2014",
+    "Adoption year": 2014,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2FGC%2F35&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC34_expression.json",
+    "Name": "General Comment No. 34: Article 19: Freedoms of opinion and expression",
+    "Simplified Name": "GC34: article 19: freedoms of opinion and expression",
+    "Signature": "CCPR/C/GC/34",
+    "Adoption Date": "12 September 2011",
+    "Adoption year": 2011,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2FGC%2F34&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC33_optional_protocol.json",
+    "Name": "General Comment No. 33: Obligation of States under Optional Protocol to the International Covenant on Civil and Political Rights",
+    "Simplified Name": "GC33: obligation of States parties under the Optional Protocol to the Covenant",
+    "Signature": "CCPR/C/GC/33",
+    "Adoption Date": "25 June 2009",
+    "Adoption year": 2009,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2FGC%2F33&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC32_article14.json",
+    "Name": "General Comment No. 32: Article 14: Right to equality before courts and tribunals and to a fair trial",
+    "Simplified Name": "GC32: article 14: right to equality before courts and tribunals and to a fair trial",
+    "Signature": "CCPR/C/GC/32",
+    "Adoption Date": "23 August 2007",
+    "Adoption year": 2007,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2FGC%2F32&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC31_nature_of_obligations.json",
+    "Name": "General Comment No. 31: The Nature of General Legal Obligation Imposed on States Parties to the Covenant",
+    "Simplified Name": "GC31: the nature of general legal obligation imposed on states parties to the Covenant",
+    "Signature": "CCPR/C/21/Rev.1/Add. 1326 May 2004",
+    "Adoption Date": "29 March 2004",
+    "Adoption year": 2004,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.13&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC30_reporting.json",
+    "Name": "General Comment No. 30: Reporting Obligations of States parties under article 40 of the Covenant",
+    "Simplified Name": "GC30: reporting obligations of states parties under article 40 of the Covenant",
+    "Signature": "CCPR/C/21/Rev.1/Add. 12",
+    "Adoption Date": "16 July 2002",
+    "Adoption year": 2002,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.2%2FAdd.12&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC29_emergency.json",
+    "Name": "General Comment No. 29: states of emergency (article 4)",
+    "Simplified Name": "GC29: states of emergency (article 4)",
+    "Signature": "CCPR/C/21/Rev.1/Add. 11",
+    "Adoption Date": "31 August 2001",
+    "Adoption year": 2001,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.11&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC28_gender_equality.json",
+    "Name": "General Comment No. 28: Article 3 (The equality of rights between men and women)",
+    "Simplified Name": "GC28: Article 3 (the equality of rights between men and women)",
+    "Signature": "CCPR/C/21/Rev.1/Add. 10",
+    "Adoption Date": "29 March 2000",
+    "Adoption year": 2000,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.10&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC27_movement.json",
+    "Name": "General Comment No. 27: Freedom of movement (article 12)",
+    "Simplified Name": "GC27: Fredom of movement (article 12)",
+    "Signature": "CCPR/C/21/Rev.1./Add.9",
+    "Adoption Date": "1 November 1999",
+    "Adoption year": 1999,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.9&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC26_continuity_obligations.json",
+    "Name": "General Comment No. 26 on issues relating to the continuity of obligations to the International Covenant on Civil and Political Rights",
+    "Simplified Name": "GC26: issues relating to the continuity of obligations to the Covenant",
+    "Signature": "CCPR/C/21/Rev.1/Add.8/Rev.1",
+    "Adoption Date": "8 December 1997",
+    "Adoption year": 1997,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.8%2FRev.1&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC25_art.25.json",
+    "Name": "General Comment No. 25: the right to participate in public affairs, voting rights and the right of equal access to public service (article 25)",
+    "Simplified Name": "GC25: the right to participate in public affairs, voting rights and the right of equal access to public service (article 25)",
+    "Signature": "CCPR/C/21/Rev.1/Add.7",
+    "Adoption Date": "27 August 1996",
+    "Adoption year": 1996,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.7&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC24_reservations.json",
+    "Name": "General Comment No. 24 on issues relating to reservations made upon ratification or accession to the Covenant or the Optional Protocols thereto, or in relation to declarations under article 41 of the Covenant",
+    "Simplified Name": "GC24: issues relating to reservations made upon ratification or accession to the Covenant or the Optional Protocols thereto, or in relation to declarations under article 41 of the Covenant",
+    "Signature": "CCPR/C/21/Rev.1/Add. 6",
+    "Adoption Date": "11 November 1994",
+    "Adoption year": 1994,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.6&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC23_minorities.json",
+    "Name": "General Comment No. 23: the rights of minorities (art. 27)",
+    "Simplified Name": "GC23: the rights of minorities (art. 27)",
+    "Signature": "CCPR/C/21/Rev.1/Add.5",
+    "Adoption Date": "26 April 1994",
+    "Adoption year": 1994,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.5&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC22_freedom_of_thought.json",
+    "Name": "General Comment No. 22: the right to freedom of thought, conscience and religion (art. 18)",
+    "Simplified Name": "GC22: the right to freedom of thought, conscience and religion (art. 18)",
+    "Signature": "CCPR/C/21/Rev.1/Add. 4",
+    "Adoption Date": "27 September 1993",
+    "Adoption year": 1993,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=CCPR%2FC%2F21%2FRev.1%2FAdd.4&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC21_art.10.json",
+    "Name": "General Comment No. 21: Article 10 (Humane treatment of persons deprived of their liberty)",
+    "Simplified Name": "GC21: article 10 (humane treatment of persons deprived of their liberty)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I), p. 202",
+    "Adoption Date": "10 April 1992",
+    "Adoption year": 1992,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F4731&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC20_art.7.json",
+    "Name": "General Comment No. 20: Article 7 (Prohibition of Torture, or other cruel, inhuman or degrading treatment or punishment)",
+    "Simplified Name": "GC20: article 7 (prohibition of torture, or other cruel, inhuman or degrading treatment or punishment)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I), p. 200",
+    "Adoption Date": "10 March 1992",
+    "Adoption year": 1992,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6621&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC19_family.json",
+    "Name": "General Comment No. 19: Protection of the Family, the Right to Marriage and Equality of the Spouses (Article 23)",
+    "Simplified Name": "GC19: protection of the family, the right to marriage and equality of the spouses (article 23)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 198",
+    "Adoption Date": "27 July 1990",
+    "Adoption year": 1990,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6620&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC18_non-discrimination.json",
+    "Name": "General Comment No. 18: Non-discrimination",
+    "Simplified Name": "GC18: Non-discrimination",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 195",
+    "Adoption Date": "10 November 1989",
+    "Adoption year": 1989,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6622&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC17_child.json",
+    "Name": "General Comment No. 17: The rights of the child (Article 24)",
+    "Simplified Name": "GC17: the rights of the child (article 24)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 193",
+    "Adoption Date": "7 April 1989",
+    "Adoption year": 1989,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6623&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC16_privacy.json",
+    "Name": "General Comment No. 16: Article 17 (Right to privacy)",
+    "Simplified Name": "GC16: article 17 (right to privacy)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 191",
+    "Adoption Date": "8 April 1988",
+    "Adoption year": 1988,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6624&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC15_aliens.json",
+    "Name": "General Comment No. 15: The position of aliens under the Covenant",
+    "Simplified Name": "GC15: the position of aliens under the Covenant",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 189",
+    "Adoption Date": "11 April 1986",
+    "Adoption year": 1986,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6625&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC14_life.json",
+    "Name": "General Comment No. 14: Article 6 (Right to life)",
+    "Simplified Name": "GC14: article 6 (right to life)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 188",
+    "Adoption Date": "9 November 1984",
+    "Adoption year": 1984,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F4723&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC13_justice.json",
+    "Name": "General Comment No. 13: Article 14 (administration of justice)",
+    "Simplified Name": "GC13: article 14 (administration of justice)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 184",
+    "Adoption Date": "13 April 1984",
+    "Adoption year": 1984,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F4721&Lang=en"
+  },
+  {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC12_self-determination.json",
+      "Name": "General Comment No. 12: Article 1 (Right to self-determination)",
+      "Simplified Name": "GC12: article 1 (right to self-determination)",
+      "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 183",
+      "Adoption Date": "13 March 1984",
+      "Adoption year": 1984,
+      "Committee": "CCPR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6626&Lang=en"
+    },
+    {
+      "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC11_art.20.json",
+      "Name": "General Comment No. 11: Article 20 (prohibition of propaganda for war and inciting national, racial or religious hatred)",
+      "Simplified Name": "GC11: article 20 (prohibition of propaganda for war and inciting national, racial or religious hatred)",
+      "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 182",
+      "Adoption Date": "29 July 1983",
+      "Adoption year": 1983,
+      "Committee": "CCPR",
+      "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F4720&Lang=en"
+    },
+    {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC10_opinion.json",
+    "Name": "General Comment No. 10: Article 19 (Freedom of opinion)",
+    "Simplified Name": "GC10: article 19 (freedom of opinion)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 181",
+    "Adoption Date": "29 June 1983",
+    "Adoption year": 1983,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6627&Lang=en"
+    },
+    {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC9_humane_treatment.json",
+    "Name": "General Comment No. 9: Article 10 (Humane treatment of persons deprived of their liberty)",
+    "Simplified Name": "GC9: article 10 (humane treatment of persons deprived of their liberty)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 180",
+    "Adoption Date": "30 July 1982",
+    "Adoption year": 1982,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F4719&Lang=en"
+   },
+   {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC8_security.json",
+    "Name": "General Comment No. 8: Article 9 (Right to liberty and security of persons)",
+    "Simplified Name": "GC8: article 9 (right to liberty and security of persons)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 179",
+    "Adoption Date": "30 June 1982",
+    "Adoption year": 1982,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6628&Lang=en"
+   },
+   {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC7_torture.json",
+    "Name": "General Comment No. 7: Article 7 (Prohibition of torture or cruel, inhuman or degrading treatment or punishment)",
+    "Simplified Name": "GC7: article 7 (Prohibition of torture or cruel, inhuman or degrading treatment or punishment)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 178",
+    "Adoption Date": "30 May 1982",
+    "Adoption year": 1982,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6629&Lang=en"
+   },
+   {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC6_life.json",
+    "Name": "General Comment No. 6: Article 6 (Right to life)",
+    "Simplified Name": "GC6: article 6 (Right to life)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p.176",
+    "Adoption Date": "30 April 1982",
+    "Adoption year": 1982,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6630&Lang=en"
+   },
+   {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC5_derogations.json",
+    "Name": "General Comment No. 5: Article 4 (Derogations)",
+    "Simplified Name": "GC5: article 4 (derogations)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 176",
+    "Adoption Date": "31 July 1981",
+    "Adoption year": 1981,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F4717&Lang=en"
+   },
+   {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC4_equality.json",
+    "Name": "General Comment No. 4: Article 3 (Equal right of men and women to the enjoyment of all civil and political rights)",
+    "Simplified Name": "GC4: article 3 (equal right of men and women to the enjoyment of all civil and political rights)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 175",
+    "Adoption Date": "30 July 1981",
+    "Adoption year": 1981,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6631&Lang=en"
+   },
+   {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC3_implementation.json",
+    "Name": "General comment No. 3: Article 2 (Implementation at the national level)",
+    "Simplified Name": "GC3: article 2 (implementation at the national level)",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 174",
+    "Adoption Date": "29 July 1981",
+    "Adoption year": 1981,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6632&Lang=en"
+   },
+   {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC2_reporting_guidelines.json",
+    "Name": "General comment No. 2: Reporting guidelines",
+    "Simplified Name": "GC2: reporting guidelines",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 173",
+    "Adoption Date": "28 July 1981",
+    "Adoption year": 1981,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6633&Lang=en"
+   },
+   {
+    "File PATH": "/home/lszoszk/mysite/json_data/Annotated_CCPR_GC1_reporting_obligation.json",
+    "Name": "General comment No. 1: Reporting obligation",
+    "Simplified Name": "GC1: reporting obligation",
+    "Signature": "HRI/GEN/1/Rev.9 (Vol. I) p. 173",
+    "Adoption Date": "27 July 1981",
+    "Adoption year": 1981,
+    "Committee": "CCPR",
+    "Link": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/Download.aspx?symbolno=INT%2FCCPR%2FGEC%2F6634&Lang=en"
   }
   ]

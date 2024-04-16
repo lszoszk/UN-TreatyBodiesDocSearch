@@ -43,8 +43,8 @@ def annotate_paragraphs(paragraphs):
     return annotated_paragraphs
 
 # Specify the directories containing JSON files and for saving annotated files
-json_dir = "[insert your directory path here]"
-annotated_json_dir = "[insert your directory path here]"
+json_dir = "C:\\Users\\lszos\\Downloads\\CCPR_GC1-37"
+annotated_json_dir = "C:\\Users\\lszos\\Downloads\\ccpr_annotated"
 
 # Create the directory for annotated files if it doesn't exist
 if not os.path.exists(annotated_json_dir):
