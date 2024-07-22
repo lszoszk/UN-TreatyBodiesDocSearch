@@ -18,7 +18,7 @@ keyword_to_label = {
     "Children": ["child", "children", "girl", "girls", "boys", "boy"],
     "Adolescents": ["adolescent", "adolescents", "youth", "young people", "young person", "young persons"],
     "Persons with disabilities": ["disability", "disabilities", "disabled", "handicap", "handicapped", "impairment", "impairments", "impair", "impairs", "impairing", "impairments"],
-    "Persons in street situations": ["street", "homeless", "homelessness", "vagrant", "vagrancy"]
+    "Persons in street situations": ["street", "homeless", "homelessness", "vagrant", "vagrancy", "test"]
 }
 
 # Function to annotate paragraphs based on keywords
@@ -43,8 +43,8 @@ def annotate_paragraphs(paragraphs):
     return annotated_paragraphs
 
 # Specify the directories containing JSON files and for saving annotated files
-json_dir = "C:\\Users\\lszos\\Downloads\\CCPR_GC1-37"
-annotated_json_dir = "C:\\Users\\lszos\\Downloads\\ccpr_annotated"
+json_dir = "/Users/zuzannakowalska/Desktop/CERD_GR"
+annotated_json_dir = "/Users/zuzannakowalska/Desktop/CERD_annotated"
 
 # Create the directory for annotated files if it doesn't exist
 if not os.path.exists(annotated_json_dir):
