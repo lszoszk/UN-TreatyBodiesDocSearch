@@ -76,6 +76,10 @@ If you encounter any issues, please check if all dependencies are correctly inst
 
 E-mail: [l.szoszkiewicz@amu.edu.pl](mailto:l.szoszkiewicz@amu.edu.pl)
 
+[Zuzanna Kowalska](https://www.linkedin.com/in/zuzanna-kowalska-a0a027218/)
+
+E-mail: [zuzkow4@st.amu.edu.pl](mailto:zuzkow4@st.amu.edu.pl)
+
 ## Version History
 
 * 0.1
