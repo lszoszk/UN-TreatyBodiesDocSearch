@@ -9,6 +9,7 @@ from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, RegexpTokenizer
 from nltk import bigrams
+from nltk.util import ngrams as nltk_ngrams
 from collections import defaultdict
 import time
 import pickle
@@ -102,7 +103,7 @@ def get_info_by_filepath(json_file, gc_info):
 
 def extract_treaty_bodies_from_filename(filename):
     # Known treaty body abbreviations
-    known_treaty_bodies = ['CRC', 'CMW', 'ESCR', 'CAT', 'CEDAW']
+    known_treaty_bodies = ['CRC', 'CMW', 'ESCR', 'CAT', 'CEDAW', 'CCPR']
     # Check if any known treaty body abbreviation is in the filename
     return [tb for tb in known_treaty_bodies if tb in filename]
 
@@ -316,6 +317,163 @@ def get_document(document_id):
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+with open("Neurorights.json", "r", encoding="utf-8") as file:
+    neurorights_data = json.load(file)
+
+# Load the Neurorights.json file
+print(f"Neurorights data loaded: {len(neurorights_data)} items")
+print(neurorights_data[0])  # Print the first item in the data
+
+# Assuming this step happens when you load your data
+for item in neurorights_data:
+    item['Title_original'] = item['Title']
+    item['Abstract_original'] = item['Abstract']
+
+# Function to highlight search terms
+def highlight_terms(text, terms):
+    for term in terms:
+        pattern = re.escape(term)
+        text = re.sub(pattern, r'<span class="highlight">\g<0></span>', text, flags=re.IGNORECASE)
+    return text
+
+@app.route('/neurorights_search', methods=['GET'])
+def neurorights_search():
+    search_query = request.args.get('search_query', '').strip().lower()
+    neurorights_filters = request.args.getlist('neurorights_filters')
+    year_start = request.args.get('year_start', default=None, type=int)
+    year_end = request.args.get('year_end', default=None, type=int)
+    only_open_access = 'only_open_access' in request.args
+    search_fields = request.args.getlist('search_fields') or ['default']
+    page = request.args.get('page', default=1, type=int)
+    # Get current page number
+    per_page = 20  # Number of items per page
+
+    ngrams = re.findall(r'"([^"]+)"', search_query)
+    words = re.findall(r'\b\w+\b', search_query)
+    query_terms = ngrams + [word for word in words if word not in ' '.join(ngrams)]
+
+    authors_counter = Counter()
+    keywords_counter = Counter()
+    bigram_stopwords = {("springer", "nature"), ("rights", "reserved"), ("all", "rights")}
+    bigrams_counter = Counter()
+    filtered_results = []  # Store filtered items before pagination
+
+    for item in neurorights_data:
+        item_year = int(item.get('Year', 0))
+        if year_start and year_end and not (year_start <= item_year <= year_end):
+            continue
+        if not matches_neurorights_filters(item, neurorights_filters):
+            continue
+        if not matches_search_query(item, query_terms, search_fields):
+            continue
+        if only_open_access and 'All Open Access' not in item.get('Open Access', ''):
+            continue
+        filtered_results.append(item)
+
+    for item in filtered_results:
+        authors_list = [author.strip() for author in item.get('Authors', '').split(';')]
+        authors_counter.update(authors_list)
+        keywords_list = item.get('Author Keywords', '').split(';')
+        keywords_list = [keyword.strip() for keyword in keywords_list if len(keyword.strip()) >= 3]
+        keywords_counter.update(keywords_list)
+
+        # Combine text from title, abstract, and keywords
+        combined_text = ' '.join([item.get('Title', ''), item.get('Abstract', ''), ' '.join(item.get('Author Keywords', '').split(';'))]).lower()
+        # Tokenize and filter
+        tokens = word_tokenize(combined_text)
+        filtered_tokens = [token for token in tokens if token not in all_stopwords and len(token) > 1]
+        # Generate and filter bigrams
+        item_bigrams = list(nltk_ngrams(filtered_tokens, 2))
+        filtered_bigrams = [bigram for bigram in item_bigrams if bigram not in bigram_stopwords]
+        # Update counter with filtered bigrams
+        bigrams_counter.update(filtered_bigrams)
+
+    # Extract the 20 most common bigrams
+    top_bigrams = bigrams_counter.most_common(20)
+    # Format bigrams for display, including the count in brackets
+    top_bigrams_str = [f"{' '.join(bigram)} ({count})" for bigram, count in top_bigrams]
+
+    # Prepare analytics data for the top 20 authors and keywords
+    top_authors = [(author, count) for author, count in authors_counter.most_common(20)]
+    top_keywords = [(keyword, count) for keyword, count in keywords_counter.most_common(20)]
+
+    # After filtering but before pagination
+    total_filtered_results = len(filtered_results)
+
+    # Pagination logic
+    total_items = len(filtered_results)
+    total_pages = (total_items + per_page - 1) // per_page  # Calculate total pages needed
+    start = (page - 1) * per_page
+    end = start + per_page
+    paginated_items = filtered_results[start:end]  # Slice the filtered results for the current page
+
+    search_results = []  # Will contain the items for the current page with highlighting
+    for item in paginated_items:
+        item_copy = item.copy()
+        if 'Title_original' in item:
+            item_copy['Title'] = highlight_terms(item['Title_original'], query_terms)
+        if 'Abstract_original' in item:
+            item_copy['Abstract'] = highlight_terms(item['Abstract_original'], query_terms)
+        if 'Author Keywords' in item and query_terms:
+            highlighted_keywords = []
+            for keyword in item['Author Keywords'].split(';'):
+                highlighted = highlight_terms(keyword.strip(), query_terms)
+                highlighted_keywords.append(highlighted)
+            item_copy['Author Keywords'] = '; '.join(highlighted_keywords)
+
+        # Update authors and keywords counters
+        authors_list = [author.strip() for author in item.get('Authors', '').split(';')]
+        authors_counter.update(authors_list)
+        keywords_list = item.get('Author Keywords', '').split(';')
+        keywords_list = [keyword.strip() for keyword in keywords_list if len(keyword.strip()) >= 3]
+        keywords_counter.update(keywords_list)
+        search_results.append(item_copy)
+
+    # Convert top authors and keywords to a string
+    top_authors_str = '; '.join([f"{author} ({count})" for author, count in top_authors])
+    top_keywords_str = '; '.join([f"{keyword} ({count})" for keyword, count in top_keywords])
+
+    return render_template('neurorights_search.html', search_results=search_results, total_filtered_results=total_filtered_results,
+                           search_query=search_query, top_bigrams=top_bigrams_str, top_authors=top_authors_str,
+                           top_keywords=top_keywords_str, total_pages=total_pages, current_page=page)
+
+def matches_neurorights_filters(item, neurorights_filters):
+    if not neurorights_filters:
+        return True  # No filter selected, so everything matches
+    text_to_search = item.get('Title', '') + " " + item.get('Abstract', '') + " " + " ".join(item.get('Author Keywords', []))
+    text_to_search = text_to_search.lower()
+    return any(nf.lower() in text_to_search for nf in neurorights_filters)
+
+def matches_search_query(item, query_terms, fields):
+    if not query_terms:
+        return True  # No query means match everything
+
+    if not fields or fields == ['default']:
+        fields = ['Title', 'Abstract', 'Keywords', 'Authors']  # If no fields are selected, search across all
+
+    text_to_search = ""
+    if 'Title' in fields:
+        text_to_search += item.get('Title', '')
+    if 'Abstract' in fields:
+        text_to_search += " " + item.get('Abstract', '')
+    if 'Keywords' in fields:
+        text_to_search += " " + item.get('Author Keywords', '')
+    if 'Authors' in fields:
+        # Assuming 'Authors' is stored as a string of author names separated by semicolons.
+        text_to_search += " " + item.get('Authors', '')
+
+    text_to_search = text_to_search.lower()
+
+    for term in query_terms:
+        if term.startswith('"') and term.endswith('"'):  # Exact phrase match
+            if term[1:-1].lower() not in text_to_search:
+                return False
+        else:  # Individual word match
+            if term.lower() not in text_to_search:
+                return False
+
+    return True
 
 #if __name__ == '__main__': # This is for running the app locally and allowing external users to visit your localhost
 #    app.run(host='0.0.0.0', debug=True)
