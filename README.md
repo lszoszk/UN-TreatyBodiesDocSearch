@@ -88,7 +88,6 @@ E-mail: [zuzkow4@st.amu.edu.pl](mailto:zuzkow4@st.amu.edu.pl)
 
 * 1.0. Full Release (31 January 2025)
   - Incorporates General Comments from all treaty bodies.
-  - Expands coverage to include additional committees, providing a comprehensive overview of all relevant human rights frameworks.
   - Enhancements and updates based on feedback from the initial release.
 
 ## License
