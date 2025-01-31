@@ -82,8 +82,14 @@ E-mail: [zuzkow4@st.amu.edu.pl](mailto:zuzkow4@st.amu.edu.pl)
 
 ## Version History
 
-* 0.1
-    * Initial Release (8 January 2024) - includes General Comments adopted by the Committee on the Rights of the Child and the Committee on Economic, Social and Cultural Rights.
+* 0.1. Initial Release (8 January 2024)
+  - Includes General Comments adopted by the Committee on the Rights of the Child and the Committee on Economic, Social and Cultural Rights.
+
+
+* 1.0. Full Release (31 January 2025)
+  - Incorporates General Comments from all treaty bodies.
+  - Expands coverage to include additional committees, providing a comprehensive overview of all relevant human rights frameworks.
+  - Enhancements and updates based on feedback from the initial release.
 
 ## License
 
