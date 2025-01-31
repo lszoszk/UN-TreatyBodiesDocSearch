@@ -1,30 +1,70 @@
-import pandas as pd
 import os
+import pandas as pd
 import json
 
-def convert_excel_to_json(directory):
-    for filename in os.listdir(directory):
-        if filename.endswith(".xlsx"):
-            file_path = os.path.join(directory, filename)
-            data = pd.read_excel(file_path)
+def convert_xlsx_to_json_folder(input_folder, output_folder):
+    """
+    Convert all XLSX files in a folder to JSON format with the desired structure:
+       [
+         {"ID": <int>, "Text": "<string>", "Labels": []},
+         ...
+       ]
+    """
 
-            # Convert DataFrame to list of dictionaries for JSON
-            json_data = data.to_dict(orient='records')
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
 
-            # Modify the IDs to match the provided format, if necessary
-            for item in json_data:
-                # Convert ID to string, remove characters after the dot, and then convert to integer
-                item['ID'] = int(str(item['ID']).split('.')[0])
+    for file_name in os.listdir(input_folder):
+        # Skip non-XLSX files and temp files
+        if not file_name.endswith('.xlsx') or file_name.startswith('~$'):
+            continue
 
-            # Define JSON output path
-            json_file_path = os.path.join(directory, filename.replace('.xlsx', '.json'))
+        print(f"Processing file: {file_name}")
+        file_path = os.path.join(input_folder, file_name)
 
-            # Write JSON data to file
-            with open(json_file_path, 'w') as json_file:
-                json.dump(json_data, json_file, indent=4)
+        # Read the Excel file
+        df = pd.read_excel(file_path)
 
-            print(f"Converted {filename} to JSON.")
+        # Strip column names to remove trailing spaces
+        df.columns = df.columns.str.strip()
+        print("Columns:", df.columns.tolist())
 
-# Specify the directory containing the Excel files
-directory = 'C:\\Users\\lszos\\Downloads\\CCPR_GC1-37'
-convert_excel_to_json(directory)
+        # Check if required columns exist
+        if "ID" not in df.columns or "Text" not in df.columns:
+            print(f"Skipping file {file_name}: Missing required columns ('ID' or 'Text')")
+            continue
+
+        print(f"Sample data from {file_name}:")
+        print(df.head())
+
+        # Build JSON data
+        json_data = []
+        for _, row in df.iterrows():
+            raw_id = row["ID"]
+            if pd.isna(raw_id):
+                continue  # skip if ID is missing
+
+            # handle numeric/floating IDs
+            id_val = int(float(str(raw_id).strip().rstrip('.')))
+
+            text_str = row["Text"]  # after stripping columns, "Text " becomes "Text"
+
+            json_data.append({
+                "ID": id_val,
+                "Text": str(text_str),
+                "Labels": []
+            })
+
+        # Write output JSON
+        output_file = os.path.join(output_folder, file_name.replace('.xlsx', '.json'))
+        with open(output_file, 'w', encoding='utf-8') as json_file:
+            json.dump(json_data, json_file, ensure_ascii=False, indent=4)
+
+        print(f"Converted {file_name} -> {output_file}")
+
+
+# Example usage:
+if __name__ == "__main__":
+    input_folder = # Add the path to the folder containing XLSX files
+    output_folder = # Add the path to the folder where JSON files will be saved
+    convert_xlsx_to_json_folder(input_folder, output_folder)
